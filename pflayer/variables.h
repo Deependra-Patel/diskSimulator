@@ -10,4 +10,6 @@
 
 #define rpm 10000 //Rounds per minute for hard disk
 
+#define cacheSize 500
+
 using namespace std;

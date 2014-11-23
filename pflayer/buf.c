@@ -164,8 +164,10 @@ int error;		/* error value returned*/
 
 		/* write out the dirty page */
 		if (tbpage->dirty&&((error=(*writefcn)(tbpage->fd,
-				tbpage->page,&tbpage->fpage))!= PFE_OK))
+				tbpage->page,&tbpage->fpage))!= PFE_OK)){
+			//change
 			return(error);
+		}
 		tbpage->dirty = FALSE;
 
 		/* unlink from hash table */
@@ -315,6 +317,8 @@ PFbpage *bpage;
 
 	/* insert it as head of linked list to make it most recently used*/
 	PFbufLinkHead(bpage);
+	//change
+	printf("%s %i %i\n","hii ",fd,pagenum);
 
 	return(PFE_OK);
 }

@@ -1,667 +1,975 @@
-Initializing disk diskController
-Initializing disk
-Initializing disk
-Initializing disk
-Initializing disk
-Initializing disk
-Initializing disk
-----------readSector 92546
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 462, 2, 9, 0, 1, ab, 
-
-Printing data of disk0
-
-
-After update data of disk0
-
-
-Printing data of disk1
-462, 
-
-After update data of disk1
-
-
-Printing data of disk2
-
-
-After update data of disk2
-
-
-Printing data of disk3
-
-
-After update data of disk3
-
-
-Printing data of disk4
-
-
-After update data of disk4
-
-
-Printing data of disk5
-
-
-After update data of disk5
-
-----------readSector 63460
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 317, 1, 2, 1, 1, ab, 
-----------readSector 4851
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 24, 1, 0, 2, 1, ab, 
-----------readSector 73220
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 366, 0, 4, 3, 1, ab, 
-----------readSector 48384
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 241, 3, 6, 4, 1, ab, 
-----------readSector 80638
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 403, 0, 7, 5, 1, ab, 
-----------readSector 69526
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 347, 2, 5, 6, 1, ab, 
-----------readSector 50998
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 254, 3, 9, 7, 1, ab, 
-----------readSector 38004
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 190, 0, 0, 8, 1, ab, 
-----------readSector 34720
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 173, 2, 4, 9, 1, ab, 
-----------readSector 88168
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 440, 3, 3, 10, 1, ab, 
-
-Printing data of disk0
-173, 317, 366, 
-
-After update data of disk0
-173, 317, 
-
-Printing data of disk1
-24, 347, 
-
-After update data of disk1
-24, 
-
-Printing data of disk2
-
-
-After update data of disk2
-
-
-Printing data of disk3
-254, 403, 440, 
-
-After update data of disk3
-254, 403, 
-
-Printing data of disk4
-
-
-After update data of disk4
-
-
-Printing data of disk5
-190, 241, 
-
-After update data of disk5
-190, 
-----------readSector 29912
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 149, 2, 2, 11, 1, ab, 
-----------readSector 42512
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 212, 2, 2, 12, 1, ab, 
-----------readSector 27732
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 138, 2, 6, 13, 1, ab, 
-----------readSector 38365
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 191, 3, 3, 14, 1, ab, 
-----------readSector 26273
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 131, 1, 4, 15, 1, ab, 
-----------readSector 98438
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 492, 0, 7, 16, 1, ab, 
-----------readSector 56527
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 282, 2, 5, 17, 1, ab, 
-----------readSector 48158
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 240, 3, 1, 18, 1, ab, 
-----------readSector 70117
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 350, 2, 3, 19, 1, ab, 
-----------readSector 33229
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 166, 0, 5, 20, 1, ab, 
-
-Printing data of disk0
-173, 191, 317, 
-
-After update data of disk0
-173, 191, 
-
-Printing data of disk1
-24, 
-
-After update data of disk1
-
-
-Printing data of disk2
-
-
-After update data of disk2
-
-
-Printing data of disk3
-131, 138, 149, 212, 254, 282, 350, 403, 
-
-After update data of disk3
-131, 138, 149, 212, 254, 282, 350, 
-
-Printing data of disk4
-240, 492, 
-
-After update data of disk4
-240, 
-
-Printing data of disk5
-166, 190, 
-
-After update data of disk5
-166, 
-----------readSector 9669
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 48, 1, 3, 21, 1, ab, 
-----------readSector 42687
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 213, 1, 7, 22, 1, ab, 
-----------readSector 34264
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 171, 1, 2, 23, 1, ab, 
-----------readSector 19422
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 97, 0, 4, 24, 1, ab, 
-----------readSector 1206
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 6, 0, 1, 25, 1, ab, 
-----------readSector 6057
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 30, 1, 1, 26, 1, ab, 
-----------readSector 33758
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 168, 3, 1, 27, 1, ab, 
-----------readSector 47361
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 236, 3, 2, 28, 1, ab, 
-----------readSector 45638
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 228, 0, 7, 29, 1, ab, 
-----------readSector 69378
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 346, 3, 5, 30, 1, ab, 
-
-Printing data of disk0
-173, 191, 
-
-After update data of disk0
-173, 
-
-Printing data of disk1
-236, 
-
-After update data of disk1
-
-
-Printing data of disk2
-6, 30, 213, 
-
-After update data of disk2
-6, 30, 
-
-Printing data of disk3
-97, 131, 138, 149, 212, 254, 282, 350, 
-
-After update data of disk3
-97, 131, 138, 149, 212, 254, 282, 
-
-Printing data of disk4
-168, 228, 240, 346, 
-
-After update data of disk4
-168, 228, 346, 
-
-Printing data of disk5
-48, 166, 171, 
-
-After update data of disk5
-48, 171, 
-----------readSector 39908
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 199, 2, 1, 31, 1, ab, 
-----------readSector 25450
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 127, 1, 0, 32, 1, ab, 
-----------readSector 74230
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 371, 0, 6, 33, 1, ab, 
-----------readSector 13128
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 65, 2, 5, 34, 1, ab, 
-----------readSector 73834
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 369, 0, 6, 35, 1, ab, 
-----------readSector 71220
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 356, 0, 4, 36, 1, ab, 
-----------readSector 99006
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 495, 0, 1, 37, 1, ab, 
-----------readSector 24833
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 124, 0, 6, 38, 1, ab, 
-----------readSector 25577
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 127, 3, 5, 39, 1, ab, 
-----------readSector 33726
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 168, 2, 5, 40, 1, ab, 
-
-Printing data of disk0
-127, 173, 371, 
-
-After update data of disk0
-127, 371, 
-
-Printing data of disk1
-356, 
-
-After update data of disk1
-
-
-Printing data of disk2
-6, 30, 127, 168, 495, 
-
-After update data of disk2
-6, 127, 168, 495, 
-
-Printing data of disk3
-97, 124, 131, 138, 149, 212, 254, 282, 
-
-After update data of disk3
-97, 124, 131, 138, 149, 212, 254, 
-
-Printing data of disk4
-65, 168, 199, 228, 346, 
-
-After update data of disk4
-65, 168, 199, 346, 
-
-Printing data of disk5
-48, 171, 369, 
-
-After update data of disk5
-171, 369, 
-----------readSector 29353
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 146, 3, 0, 41, 1, ab, 
-----------readSector 55489
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 277, 1, 7, 42, 1, ab, 
-----------readSector 92591
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 462, 3, 8, 43, 1, ab, 
-----------readSector 57085
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 285, 1, 7, 44, 1, ab, 
-----------readSector 10207
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 51, 0, 1, 45, 1, ab, 
-----------readSector 18864
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 94, 1, 2, 46, 1, ab, 
-----------readSector 71875
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 359, 1, 5, 47, 1, ab, 
-----------readSector 83086
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 415, 1, 7, 48, 1, ab, 
-----------readSector 67022
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 335, 0, 4, 49, 1, ab, 
-----------readSector 41993
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 209, 3, 8, 50, 1, ab, 
-
-Printing data of disk0
-127, 285, 359, 371, 
-
-After update data of disk0
-285, 359, 371, 
-
-Printing data of disk1
-415, 462, 
-
-After update data of disk1
-415, 
-
-Printing data of disk2
-6, 127, 168, 495, 
-
-After update data of disk2
-127, 168, 495, 
-
-Printing data of disk3
-51, 97, 124, 131, 138, 149, 209, 212, 254, 335, 
-
-After update data of disk3
-51, 97, 124, 131, 138, 149, 209, 212, 335, 
-
-Printing data of disk4
-65, 146, 168, 199, 346, 
-
-After update data of disk4
-65, 146, 168, 346, 
-
-Printing data of disk5
-94, 171, 277, 369, 
-
-After update data of disk5
-94, 277, 369, 
-----------readSector 16316
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 81, 2, 3, 51, 1, ab, 
-----------readSector 76692
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 383, 1, 8, 52, 1, ab, 
-----------readSector 84680
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 423, 1, 6, 53, 1, ab, 
-----------readSector 50580
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 252, 3, 6, 54, 1, ab, 
-----------readSector 12466
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 62, 1, 3, 55, 1, ab, 
-----------readSector 2238
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 11, 0, 7, 56, 1, ab, 
-----------readSector 56637
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 283, 0, 7, 57, 1, ab, 
-----------readSector 46224
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 231, 0, 4, 58, 1, ab, 
-----------readSector 49600
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 248, 0, 0, 59, 1, ab, 
-----------readSector 2275
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 11, 1, 5, 60, 1, ab, 
-
-Printing data of disk0
-11, 248, 285, 359, 371, 423, 
-
-After update data of disk0
-11, 248, 359, 371, 423, 
-
-Printing data of disk1
-62, 81, 252, 415, 
-
-After update data of disk1
-62, 81, 252, 
-
-Printing data of disk2
-127, 168, 283, 495, 
-
-After update data of disk2
-168, 283, 495, 
-
-Printing data of disk3
-51, 97, 124, 131, 138, 149, 209, 212, 335, 383, 
-
-After update data of disk3
-51, 97, 124, 131, 138, 149, 209, 335, 383, 
-
-Printing data of disk4
-11, 65, 146, 168, 346, 
-
-After update data of disk4
-11, 65, 146, 346, 
-
-Printing data of disk5
-94, 231, 277, 369, 
-
-After update data of disk5
-94, 231, 369, 
-----------readSector 31954
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 159, 3, 0, 61, 1, ab, 
-----------readSector 5860
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 29, 1, 2, 62, 1, ab, 
-----------readSector 44077
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 220, 1, 5, 63, 1, ab, 
-----------readSector 22536
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 112, 2, 7, 64, 1, ab, 
-----------readSector 35340
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 176, 2, 8, 65, 1, ab, 
-----------readSector 17912
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 89, 2, 2, 66, 1, ab, 
-----------readSector 93757
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 468, 3, 1, 67, 1, ab, 
-----------readSector 34347
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 171, 2, 9, 68, 1, ab, 
-----------readSector 59097
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 295, 1, 9, 69, 1, ab, 
-----------readSector 19334
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 96, 2, 6, 70, 1, ab, 
-
-Printing data of disk0
-11, 29, 248, 359, 371, 423, 
-
-After update data of disk0
-11, 29, 248, 371, 423, 
-
-Printing data of disk1
-62, 81, 176, 252, 
-
-After update data of disk1
-62, 81, 176, 
-
-Printing data of disk2
-112, 168, 171, 283, 295, 495, 
-
-After update data of disk2
-112, 171, 283, 295, 495, 
-
-Printing data of disk3
-51, 89, 97, 124, 131, 138, 149, 209, 220, 335, 383, 468, 
-
-After update data of disk3
-51, 89, 97, 124, 131, 138, 149, 220, 335, 383, 468, 
-
-Printing data of disk4
-11, 65, 146, 346, 
-
-After update data of disk4
-11, 65, 346, 
-
-Printing data of disk5
-94, 96, 159, 231, 369, 
-
-After update data of disk5
-94, 96, 159, 231, 
-----------readSector 84425
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 422, 0, 5, 71, 1, ab, 
-----------readSector 88450
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 442, 1, 0, 72, 1, ab, 
-----------readSector 91175
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 455, 3, 5, 73, 1, ab, 
-----------readSector 77016
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 385, 0, 3, 74, 1, ab, 
-----------readSector 61887
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 309, 1, 7, 75, 1, ab, 
-----------readSector 17734
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 88, 2, 6, 76, 1, ab, 
-----------readSector 95881
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 479, 1, 6, 77, 1, ab, 
-----------readSector 33762
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 168, 3, 2, 78, 1, ab, 
-----------readSector 821
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 4, 0, 4, 79, 1, ab, 
-----------readSector 79255
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 396, 1, 1, 80, 1, ab, 
-
-Printing data of disk0
-11, 29, 248, 371, 396, 422, 423, 442, 455, 
-
-After update data of disk0
-11, 29, 248, 396, 422, 423, 442, 455, 
-
-Printing data of disk1
-4, 62, 81, 176, 
-
-After update data of disk1
-4, 62, 81, 
-
-Printing data of disk2
-112, 171, 283, 295, 309, 385, 479, 495, 
-
-After update data of disk2
-112, 283, 295, 309, 385, 479, 495, 
-
-Printing data of disk3
-51, 89, 97, 124, 131, 138, 149, 168, 220, 335, 383, 468, 
-
-After update data of disk3
-51, 89, 97, 124, 131, 138, 168, 220, 335, 383, 468, 
-
-Printing data of disk4
-11, 65, 346, 
-
-After update data of disk4
-11, 346, 
-
-Printing data of disk5
-88, 94, 96, 159, 231, 
-
-After update data of disk5
-88, 94, 96, 159, 
-----------readSector 75755
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 378, 3, 1, 81, 1, ab, 
-----------readSector 17137
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 85, 2, 7, 82, 1, ab, 
-----------readSector 55947
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 279, 2, 9, 83, 1, ab, 
-----------readSector 76788
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 383, 3, 7, 84, 1, ab, 
-----------readSector 67717
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 338, 2, 3, 85, 1, ab, 
-----------readSector 84765
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 423, 3, 3, 86, 1, ab, 
-----------readSector 95378
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 476, 3, 5, 87, 1, ab, 
-----------readSector 40706
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 203, 2, 1, 88, 1, ab, 
-----------readSector 47341
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 236, 2, 8, 89, 1, ab, 
-----------readSector 44978
-Reading From Disk: 4
-Putting request (cNum, tNum, sNum, t, requestType, data) 224, 3, 5, 90, 1, ab, 
-
-Printing data of disk0
-11, 29, 248, 378, 396, 422, 423, 423, 442, 455, 
-
-After update data of disk0
-11, 29, 248, 378, 422, 423, 423, 442, 455, 
-
-Printing data of disk1
-4, 62, 81, 203, 
-
-After update data of disk1
-4, 62, 203, 
-
-Printing data of disk2
-112, 236, 279, 283, 295, 309, 385, 479, 495, 
-
-After update data of disk2
-112, 236, 279, 295, 309, 385, 479, 495, 
-
-Printing data of disk3
-51, 85, 89, 97, 124, 131, 138, 168, 220, 335, 338, 383, 468, 
-
-After update data of disk3
-51, 85, 89, 97, 124, 131, 168, 220, 335, 338, 383, 468, 
-
-Printing data of disk4
-11, 224, 346, 383, 476, 
-
-After update data of disk4
-224, 346, 383, 476, 
-
-Printing data of disk5
-88, 94, 96, 159, 
-
-After update data of disk5
-88, 94, 96, 
-----------readSector 59333
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 296, 2, 6, 91, 1, ab, 
-----------readSector 79296
-Reading From Disk: 2
-Putting request (cNum, tNum, sNum, t, requestType, data) 396, 1, 9, 92, 1, ab, 
-----------readSector 67190
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 335, 3, 8, 93, 1, ab, 
-----------readSector 3410
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 17, 0, 2, 94, 1, ab, 
-----------readSector 1832
-Reading From Disk: 3
-Putting request (cNum, tNum, sNum, t, requestType, data) 9, 0, 6, 95, 1, ab, 
-----------readSector 2531
-Reading From Disk: 1
-Putting request (cNum, tNum, sNum, t, requestType, data) 12, 2, 6, 96, 1, ab, 
-----------readSector 37674
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 188, 1, 4, 97, 1, ab, 
-----------readSector 95589
-Reading From Disk: 5
-Putting request (cNum, tNum, sNum, t, requestType, data) 477, 3, 7, 98, 1, ab, 
-----------readSector 53230
-Reading From Disk: 0
-Putting request (cNum, tNum, sNum, t, requestType, data) 266, 0, 6, 99, 1, ab, 
+file1 created
+file2 created
+opened file1
+allocated page 0
+allocated page 1
+allocated page 2
+allocated page 3
+allocated page 4
+allocated page 5
+allocated page 6
+allocated page 7
+allocated page 8
+allocated page 9
+allocated page 10
+allocated page 11
+allocated page 12
+allocated page 13
+allocated page 14
+allocated page 15
+allocated page 16
+allocated page 17
+allocated page 18
+allocated page 19
+hii  0 0
+hii  0 1
+hii  0 2
+hii  0 3
+hii  0 4
+hii  0 5
+hii  0 6
+hii  0 7
+hii  0 8
+hii  0 9
+hii  0 10
+hii  0 11
+hii  0 12
+hii  0 13
+hii  0 14
+hii  0 15
+hii  0 16
+hii  0 17
+hii  0 18
+hii  0 19
+opening file1
+reading file
+got page 0, 0
+hii  0 0
+got page 1, 1
+hii  0 1
+got page 2, 2
+hii  0 2
+got page 3, 3
+hii  0 3
+got page 4, 4
+hii  0 4
+got page 5, 5
+hii  0 5
+got page 6, 6
+hii  0 6
+got page 7, 7
+hii  0 7
+got page 8, 8
+hii  0 8
+got page 9, 9
+hii  0 9
+got page 10, 10
+hii  0 10
+got page 11, 11
+hii  0 11
+got page 12, 12
+hii  0 12
+got page 13, 13
+hii  0 13
+got page 14, 14
+hii  0 14
+got page 15, 15
+hii  0 15
+got page 16, 16
+hii  0 16
+got page 17, 17
+hii  0 17
+got page 18, 18
+hii  0 18
+got page 19, 19
+hii  0 19
+eof reached
+opened file2
+allocated page 0
+allocated page 1
+allocated page 2
+allocated page 3
+allocated page 4
+allocated page 5
+allocated page 6
+allocated page 7
+allocated page 8
+allocated page 9
+allocated page 10
+allocated page 11
+allocated page 12
+allocated page 13
+allocated page 14
+allocated page 15
+allocated page 16
+allocated page 17
+allocated page 18
+allocated page 19
+hii  0 0
+hii  0 1
+hii  0 2
+hii  0 3
+hii  0 4
+hii  0 5
+hii  0 6
+hii  0 7
+hii  0 8
+hii  0 9
+hii  0 10
+hii  0 11
+hii  0 12
+hii  0 13
+hii  0 14
+hii  0 15
+hii  0 16
+hii  0 17
+hii  0 18
+hii  0 19
+opening file2
+reading file
+got page 0, 0
+hii  0 0
+got page 1, 1
+hii  0 1
+got page 2, 2
+hii  0 2
+got page 3, 3
+hii  0 3
+got page 4, 4
+hii  0 4
+got page 5, 5
+hii  0 5
+got page 6, 6
+hii  0 6
+got page 7, 7
+hii  0 7
+got page 8, 8
+hii  0 8
+got page 9, 9
+hii  0 9
+got page 10, 10
+hii  0 10
+got page 11, 11
+hii  0 11
+got page 12, 12
+hii  0 12
+got page 13, 13
+hii  0 13
+got page 14, 14
+hii  0 14
+got page 15, 15
+hii  0 15
+got page 16, 16
+hii  0 16
+got page 17, 17
+hii  0 17
+got page 18, 18
+hii  0 18
+got page 19, 19
+hii  0 19
+eof reached
+opened file1
+opened file2
+hii  1 0
+disposed 0 of file2
+hii  0 1
+disposed 1 of file1
+hii  1 2
+disposed 2 of file2
+hii  0 3
+disposed 3 of file1
+hii  1 4
+disposed 4 of file2
+hii  0 5
+disposed 5 of file1
+hii  1 6
+disposed 6 of file2
+hii  0 7
+disposed 7 of file1
+hii  1 8
+disposed 8 of file2
+hii  0 9
+disposed 9 of file1
+hii  1 10
+disposed 10 of file2
+hii  0 11
+disposed 11 of file1
+hii  1 12
+disposed 12 of file2
+hii  0 13
+disposed 13 of file1
+hii  1 14
+disposed 14 of file2
+hii  0 15
+disposed 15 of file1
+hii  1 16
+disposed 16 of file2
+hii  0 17
+disposed 17 of file1
+hii  1 18
+disposed 18 of file2
+hii  0 19
+disposed 19 of file1
+closed file1
+closed file2
+opening file1
+reading file
+got page 0, 0
+hii  0 0
+hii  0 1
+got page 2, 2
+hii  0 2
+hii  0 3
+got page 4, 4
+hii  0 4
+hii  0 5
+got page 6, 6
+hii  0 6
+hii  0 7
+got page 8, 8
+hii  0 8
+hii  0 9
+got page 10, 10
+hii  0 10
+hii  0 11
+got page 12, 12
+hii  0 12
+hii  0 13
+got page 14, 14
+hii  0 14
+hii  0 15
+got page 16, 16
+hii  0 16
+hii  0 17
+got page 18, 18
+hii  0 18
+hii  0 19
+eof reached
+opening file2
+reading file
+hii  0 0
+got page 1, 1
+hii  0 1
+hii  0 2
+got page 3, 3
+hii  0 3
+hii  0 4
+got page 5, 5
+hii  0 5
+hii  0 6
+got page 7, 7
+hii  0 7
+hii  0 8
+got page 9, 9
+hii  0 9
+hii  0 10
+got page 11, 11
+hii  0 11
+hii  0 12
+got page 13, 13
+hii  0 13
+hii  0 14
+got page 15, 15
+hii  0 15
+hii  0 16
+got page 17, 17
+hii  0 17
+hii  0 18
+got page 19, 19
+hii  0 19
+eof reached
+file1 created
+file2 created
+opened file1
+allocated page 0
+allocated page 1
+allocated page 2
+allocated page 3
+allocated page 4
+allocated page 5
+allocated page 6
+allocated page 7
+allocated page 8
+allocated page 9
+allocated page 10
+allocated page 11
+allocated page 12
+allocated page 13
+allocated page 14
+allocated page 15
+allocated page 16
+allocated page 17
+allocated page 18
+allocated page 19
+hii  0 0
+hii  0 1
+hii  0 2
+hii  0 3
+hii  0 4
+hii  0 5
+hii  0 6
+hii  0 7
+hii  0 8
+hii  0 9
+hii  0 10
+hii  0 11
+hii  0 12
+hii  0 13
+hii  0 14
+hii  0 15
+hii  0 16
+hii  0 17
+hii  0 18
+hii  0 19
+opened file2
+allocated page 0
+allocated page 1
+allocated page 2
+allocated page 3
+allocated page 4
+allocated page 5
+allocated page 6
+allocated page 7
+allocated page 8
+allocated page 9
+allocated page 10
+allocated page 11
+allocated page 12
+allocated page 13
+allocated page 14
+allocated page 15
+allocated page 16
+allocated page 17
+allocated page 18
+allocated page 19
+hii  0 0
+hii  0 1
+hii  0 2
+hii  0 3
+hii  0 4
+hii  0 5
+hii  0 6
+hii  0 7
+hii  0 8
+hii  0 9
+hii  0 10
+hii  0 11
+hii  0 12
+hii  0 13
+hii  0 14
+hii  0 15
+hii  0 16
+hii  0 17
+hii  0 18
+hii  0 19
+opened file1
+opened file2
+hii  1 20
+alloc 20 file1
+hii  0 20
+alloc 20 file2
+hii  1 21
+alloc 21 file1
+hii  0 21
+alloc 21 file2
+hii  1 22
+alloc 22 file1
+hii  0 22
+alloc 22 file2
+hii  1 23
+alloc 23 file1
+hii  0 23
+alloc 23 file2
+hii  1 24
+alloc 24 file1
+hii  0 24
+alloc 24 file2
+hii  1 25
+alloc 25 file1
+hii  0 25
+alloc 25 file2
+hii  1 26
+alloc 26 file1
+hii  0 26
+alloc 26 file2
+hii  1 27
+alloc 27 file1
+hii  0 27
+alloc 27 file2
+hii  1 28
+alloc 28 file1
+hii  0 28
+alloc 28 file2
+hii  1 29
+alloc 29 file1
+hii  0 29
+alloc 29 file2
+hii  1 30
+alloc 30 file1
+hii  0 30
+alloc 30 file2
+hii  1 31
+alloc 31 file1
+hii  0 31
+alloc 31 file2
+hii  1 32
+alloc 32 file1
+hii  0 32
+alloc 32 file2
+hii  1 33
+alloc 33 file1
+hii  0 33
+alloc 33 file2
+hii  1 34
+alloc 34 file1
+hii  0 34
+alloc 34 file2
+hii  1 35
+alloc 35 file1
+hii  0 35
+alloc 35 file2
+hii  1 36
+alloc 36 file1
+hii  0 36
+alloc 36 file2
+hii  1 37
+alloc 37 file1
+hii  0 37
+alloc 37 file2
+hii  1 38
+alloc 38 file1
+hii  0 38
+alloc 38 file2
+hii  1 39
+alloc 39 file1
+hii  0 39
+alloc 39 file2
+hii  1 20
+dispose fd2 page 20
+hii  0 21
+dispose fd1 page 21
+hii  1 22
+dispose fd2 page 22
+hii  0 23
+dispose fd1 page 23
+hii  1 24
+dispose fd2 page 24
+hii  0 25
+dispose fd1 page 25
+hii  1 26
+dispose fd2 page 26
+hii  0 27
+dispose fd1 page 27
+hii  1 28
+dispose fd2 page 28
+hii  0 29
+dispose fd1 page 29
+hii  1 30
+dispose fd2 page 30
+hii  0 31
+dispose fd1 page 31
+hii  1 32
+dispose fd2 page 32
+hii  0 33
+dispose fd1 page 33
+hii  1 34
+dispose fd2 page 34
+hii  0 35
+dispose fd1 page 35
+hii  1 36
+dispose fd2 page 36
+hii  0 37
+dispose fd1 page 37
+hii  1 38
+dispose fd2 page 38
+hii  0 39
+dispose fd1 page 39
+getting file2
+21 21
+hii  1 21
+23 23
+hii  1 23
+25 25
+hii  1 25
+27 27
+hii  1 27
+29 29
+hii  1 29
+31 31
+hii  1 31
+33 33
+hii  1 33
+35 35
+hii  1 35
+37 37
+hii  1 37
+39 39
+hii  1 39
+getting file1
+20 20
+hii  0 20
+22 22
+hii  0 22
+24 24
+hii  0 24
+26 26
+hii  0 26
+28 28
+hii  0 28
+30 30
+hii  0 30
+32 32
+hii  0 32
+34 34
+hii  0 34
+36 36
+hii  0 36
+38 38
+hii  0 38
+reading file
+got page 0, 0
+hii  1 0
+got page 1, 1
+hii  1 1
+got page 2, 2
+hii  1 2
+got page 3, 3
+hii  1 3
+got page 4, 4
+hii  1 4
+got page 5, 5
+hii  1 5
+got page 6, 6
+hii  1 6
+got page 7, 7
+hii  1 7
+got page 8, 8
+hii  1 8
+got page 9, 9
+hii  1 9
+got page 10, 10
+hii  1 10
+got page 11, 11
+hii  1 11
+got page 12, 12
+hii  1 12
+got page 13, 13
+hii  1 13
+got page 14, 14
+hii  1 14
+got page 15, 15
+hii  1 15
+got page 16, 16
+hii  1 16
+got page 17, 17
+hii  1 17
+got page 18, 18
+hii  1 18
+got page 19, 19
+hii  1 19
+hii  1 20
+got page 21, 21
+hii  1 21
+hii  1 22
+got page 23, 23
+hii  1 23
+hii  1 24
+got page 25, 25
+hii  1 25
+hii  1 26
+got page 27, 27
+hii  1 27
+hii  1 28
+got page 29, 29
+hii  1 29
+hii  1 30
+got page 31, 31
+hii  1 31
+hii  1 32
+got page 33, 33
+hii  1 33
+hii  1 34
+got page 35, 35
+hii  1 35
+hii  1 36
+got page 37, 37
+hii  1 37
+hii  1 38
+got page 39, 39
+hii  1 39
+eof reached
+reading file
+got page 0, 0
+hii  0 0
+got page 1, 1
+hii  0 1
+got page 2, 2
+hii  0 2
+got page 3, 3
+hii  0 3
+got page 4, 4
+hii  0 4
+got page 5, 5
+hii  0 5
+got page 6, 6
+hii  0 6
+got page 7, 7
+hii  0 7
+got page 8, 8
+hii  0 8
+got page 9, 9
+hii  0 9
+got page 10, 10
+hii  0 10
+got page 11, 11
+hii  0 11
+got page 12, 12
+hii  0 12
+got page 13, 13
+hii  0 13
+got page 14, 14
+hii  0 14
+got page 15, 15
+hii  0 15
+got page 16, 16
+hii  0 16
+got page 17, 17
+hii  0 17
+got page 18, 18
+hii  0 18
+got page 19, 19
+hii  0 19
+got page 20, 20
+hii  0 20
+hii  0 21
+got page 22, 22
+hii  0 22
+hii  0 23
+got page 24, 24
+hii  0 24
+hii  0 25
+got page 26, 26
+hii  0 26
+hii  0 27
+got page 28, 28
+hii  0 28
+hii  0 29
+got page 30, 30
+hii  0 30
+hii  0 31
+got page 32, 32
+hii  0 32
+hii  0 33
+got page 34, 34
+hii  0 34
+hii  0 35
+got page 36, 36
+hii  0 36
+hii  0 37
+got page 38, 38
+hii  0 38
+hii  0 39
+eof reached
+putting stuff into holes in fd1
+hii  0 39
+hii  0 37
+hii  0 35
+hii  0 33
+hii  0 31
+hii  0 29
+hii  0 27
+hii  0 25
+hii  0 23
+printing fd1reading file
+got page 0, 0
+hii  0 0
+got page 1, 1
+hii  0 1
+got page 2, 2
+hii  0 2
+got page 3, 3
+hii  0 3
+got page 4, 4
+hii  0 4
+got page 5, 5
+hii  0 5
+got page 6, 6
+hii  0 6
+got page 7, 7
+hii  0 7
+got page 8, 8
+hii  0 8
+got page 9, 9
+hii  0 9
+got page 10, 10
+hii  0 10
+got page 11, 11
+hii  0 11
+got page 12, 12
+hii  0 12
+got page 13, 13
+hii  0 13
+got page 14, 14
+hii  0 14
+got page 15, 15
+hii  0 15
+got page 16, 16
+hii  0 16
+got page 17, 17
+hii  0 17
+got page 18, 18
+hii  0 18
+got page 19, 19
+hii  0 19
+got page 20, 20
+hii  0 20
+hii  0 21
+got page 22, 22
+hii  0 22
+got page 23, 23
+hii  0 23
+got page 24, 24
+hii  0 24
+got page 25, 25
+hii  0 25
+got page 26, 26
+hii  0 26
+got page 27, 27
+hii  0 27
+got page 28, 28
+hii  0 28
+got page 29, 29
+hii  0 29
+got page 30, 30
+hii  0 30
+got page 31, 31
+hii  0 31
+got page 32, 32
+hii  0 32
+got page 33, 33
+hii  0 33
+got page 34, 34
+hii  0 34
+got page 35, 35
+hii  0 35
+got page 36, 36
+hii  0 36
+got page 37, 37
+hii  0 37
+got page 38, 38
+hii  0 38
+got page 39, 39
+hii  0 39
+eof reached
+closed file1
+closed file2
+opened file1
+got page1
+hii  0 1
+opened file1 again
+reading file
+got page 0, 0
+hii  0 0
+got page 1, 1
+hii  0 1
+got page 2, 2
+hii  0 2
+got page 3, 3
+hii  0 3
+got page 4, 4
+hii  0 4
+got page 5, 5
+hii  0 5
+got page 6, 6
+hii  0 6
+got page 7, 7
+hii  0 7
+got page 8, 8
+hii  0 8
+got page 9, 9
+hii  0 9
+got page 10, 10
+hii  0 10
+got page 11, 11
+hii  0 11
+got page 12, 12
+hii  0 12
+got page 13, 13
+hii  0 13
+got page 14, 14
+hii  0 14
+got page 15, 15
+hii  0 15
+got page 16, 16
+hii  0 16
+got page 17, 17
+hii  0 17
+got page 18, 18
+hii  0 18
+got page 19, 19
+hii  0 19
+got page 20, 20
+hii  0 20
+hii  0 21
+got page 22, 22
+hii  0 22
+got page 23, 23
+hii  0 23
+got page 24, 24
+hii  0 24
+got page 25, 25
+hii  0 25
+got page 26, 26
+hii  0 26
+got page 27, 27
+hii  0 27
+got page 28, 28
+hii  0 28
+got page 29, 29
+hii  0 29
+got page 30, 30
+hii  0 30
+got page 31, 31
+hii  0 31
+got page 32, 32
+hii  0 32
+got page 33, 33
+hii  0 33
+got page 34, 34
+hii  0 34
+got page 35, 35
+hii  0 35
+got page 36, 36
+hii  0 36
+got page 37, 37
+hii  0 37
+got page 38, 38
+hii  0 38
+got page 39, 39
+hii  0 39
+eof reached
+reading file
+got page 0, 0
+hii  1 0
+got page 1, 1
+hii  1 1
+got page 2, 2
+hii  1 2
+got page 3, 3
+hii  1 3
+got page 4, 4
+hii  1 4
+got page 5, 5
+hii  1 5
+got page 6, 6
+hii  1 6
+got page 7, 7
+hii  1 7
+got page 8, 8
+hii  1 8
+got page 9, 9
+hii  1 9
+got page 10, 10
+hii  1 10
+got page 11, 11
+hii  1 11
+got page 12, 12
+hii  1 12
+got page 13, 13
+hii  1 13
+got page 14, 14
+hii  1 14
+got page 15, 15
+hii  1 15
+got page 16, 16
+hii  1 16
+got page 17, 17
+hii  1 17
+got page 18, 18
+hii  1 18
+got page 19, 19
+hii  1 19
+got page 20, 20
+hii  1 20
+hii  1 21
+got page 22, 22
+hii  1 22
+got page 23, 23
+hii  1 23
+got page 24, 24
+hii  1 24
+got page 25, 25
+hii  1 25
+got page 26, 26
+hii  1 26
+got page 27, 27
+hii  1 27
+got page 28, 28
+hii  1 28
+got page 29, 29
+hii  1 29
+got page 30, 30
+hii  1 30
+got page 31, 31
+hii  1 31
+got page 32, 32
+hii  1 32
+got page 33, 33
+hii  1 33
+got page 34, 34
+hii  1 34
+got page 35, 35
+hii  1 35
+got page 36, 36
+hii  1 36
+got page 37, 37
+hii  1 37
+got page 38, 38
+hii  1 38
+got page 39, 39
+hii  1 39
+eof reached
+buffer:
+buffer content:
+empty
+hash table:
+bucket 0
+	empty
+bucket 1
+	empty
+bucket 2
+	empty
+bucket 3
+	empty
+bucket 4
+	empty
+bucket 5
+	empty
+bucket 6
+	empty
+bucket 7
+	empty
+bucket 8
+	empty
+bucket 9
+	empty
+bucket 10
+	empty
+bucket 11
+	empty
+bucket 12
+	empty
+bucket 13
+	empty
+bucket 14
+	empty
+bucket 15
+	empty
+bucket 16
+	empty
+bucket 17
+	empty
+bucket 18
+	empty
+bucket 19
+	empty
