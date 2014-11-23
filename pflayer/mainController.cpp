@@ -2,6 +2,7 @@
 
 mainControllerStruct::mainControllerStruct(){
 	pagesInDisk = D*M*K;
+	cacheControllerStruct = cacheController();
 }
 
 // fileNum, pagenum -> diskaddress
@@ -19,7 +20,7 @@ void mainControllerStruct::diskRequest(int fileNum, int pagenum, int requestType
 			printf("%s\n", "No such file exists in disk. Bad access Request.");
 		}
 		else{
-			fetchPageFromDisk((fileNum * pagesInDisk) + it->second);	
+			cacheControllerStruct->fetchPageFromDisk((fileNum * pagesInDisk) + it->second);	
 		}
 		
 	}
@@ -40,7 +41,7 @@ void mainControllerStruct::diskRequest(int fileNum, int pagenum, int requestType
 			answer = (fileNum*pagesInDisk) + newPageNum;
 		}
 
-		writePageToDisk(answer);
+		cacheControllerStruct->writePageToDisk(answer);
 	}
 	else{
 		/**

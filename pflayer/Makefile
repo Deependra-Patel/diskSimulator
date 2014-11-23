@@ -26,11 +26,7 @@ lint:
 install: pflayer.o 
 
 clean:	
-	rm *.o
-	rm *~
-	rm testhash
-	rm testpf
-	rm a.out
+	rm -rf *.o *~ testhash testpf a.out file1 file2
 
 compile:
 	g++ diskController.cpp diskRequestHandler.cpp main.cpp
