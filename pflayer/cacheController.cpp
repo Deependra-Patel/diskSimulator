@@ -1,4 +1,4 @@
-cacheController(){
+cacheController::cacheController(){
 	curSize = 0;
 	free = new bool[cacheSize];
 	dirty = new bool[cacheSize];
@@ -8,7 +8,7 @@ cacheController(){
 		dirty[i] = false;
 	}
 }
-int getFreePage(){
+int cacheController::getFreePage(){
 	for(int i=0; i<cacheSize; i++){ //if any page is free
 		if(free[i]){
 			return i;
@@ -30,7 +30,7 @@ int getFreePage(){
 	}
 	else return 0;
 }
-void putPageInCache(int diskAddress, bool read){
+void cacheController::putPageInCache(int diskAddress, bool read){
 	int freePage = getFreePage();
 	diskAddressCacheMap[diskAddress] = freePage;//putting page in cache
 	accessOrder.push_back(freePage);
@@ -38,7 +38,7 @@ void putPageInCache(int diskAddress, bool read){
 	if(!read)
 		dirty[freePage] = true;
 }
-void fetchPageFromDisk(int diskAddress){
+void cacheController::fetchPageFromDisk(int diskAddress){
 	std::unordered_map<int, int>::const_iterator got = diskAddressCacheMap.find(diskAddress);
 	if(got == diskAddressCacheMap.end()){
 		cout<<"Page not found in cache"<<endl;
@@ -49,7 +49,7 @@ void fetchPageFromDisk(int diskAddress){
 		cout<<"Page found in cache";
 	}
 }
-void writePageToDisk(int diskAddress){
+void cacheController::writePageToDisk(int diskAddress){
 	std::unordered_map<int, int>::const_iterator got = diskAddressCacheMap.find(diskAddress);
 	if(got == diskAddressCacheMap.end()){
 		cout<<"Page not found in cache"<<endl;

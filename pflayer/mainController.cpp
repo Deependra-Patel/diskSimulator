@@ -2,7 +2,7 @@
 
 mainControllerStruct::mainControllerStruct(){
 	pagesInDisk = D*M*K;
-	cacheControllerStruct = cacheController();
+	cacheControllerStruct = new cacheController();
 }
 
 // fileNum, pagenum -> diskaddress
