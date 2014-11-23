@@ -31,3 +31,6 @@ clean:
 	rm testhash
 	rm testpf
 	rm a.out
+
+compile:
+	g++ diskController.cpp diskRequestHandler.cpp main.cpp

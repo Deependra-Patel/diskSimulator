@@ -1,59 +1,65 @@
-#include "variables.h"
-
+#include "diskController.h"
 
 struct dchs{
 	int d, c, h, s, parityDisk;
 	dchs(int address){
 		int blockNoInDisk = (address)/D;
-		int parityDisk = blockInDisk%(D+1);
-		d = blockNoInDisk;
-		c = (diskAddress/(M*K))%N;
-		h = (diskAddress/K)%M;
-		s = (diskAddress)%K;
+		int parityDisk = blockNoInDisk%(D+1);
+		int temp = address%D;
+		if(parityDisk<=temp)
+			d = temp+1;
+		else d = temp;
+		c = (blockNoInDisk/(M*K))%N;
+		h = (blockNoInDisk/K)%M;
+		s = (blockNoInDisk)%K;
 	}
 };
 
-class diskController{
-	disk disks[];
-	int timer;
-	public diskController(){
-		timer = 0;
-		disks = new disk[D+1];
-		for(int i=0; i<D+1; i++){
-			disks[i] = new disk();
-		}
+diskController::diskController(){
+	cout<<"Initializing disk diskController"<<endl;
+	timer = 0;
+	disks = new disk*[D+1];
+	for(int i=0; i<D+1; i++){
+		disks[i] = new disk();
 	}
+}
 
-	String readSector(int diskAddress){
-		dchs x = new dchs(diskAddress);
-		disks[x.d].readRequest(x.c, x.h, x.s, timer);
-		timer++;
+void diskController::readSector(int diskAddress, char* data){
+	dchs x = dchs(diskAddress);
+	cout<<"----------readSector "<<diskAddress<<endl;
+	cout<<"Reading From Disk: "<<x.d<<endl;	
+	disks[x.d]->readRequest(x.c, x.h, x.s, timer, data);
+	timer++;
+}
+void diskController::writeSector(int diskAddress, char* data){
+	dchs x = dchs(diskAddress);
+	cout<<"---------writeSector"<<diskAddress<<endl;
+	cout<<"Reading From Disk: "<<x.parityDisk<<endl;
+	disks[x.parityDisk]->readRequest(x.c, x.h, x.s, timer, data);
+	timer++;
+	cout<<"Reading From Disk: "<<x.d<<endl;
+	disks[x.d]->readRequest(x.c, x.h, x.s, timer, data);
+	timer++;
+	//takes xor and writes new data here
+	cout<<"Writing to Disk: "<<x.d<<endl;
+	disks[x.d]->writeRequest(x.c, x.h, x.s, timer, data);
+	timer++;
+}
+void diskController::updateAllDisks(){
+	for(int i=0; i<D+1; i++){
+		cout<<endl<<"Printing data of disk"<<i<<endl;
+		disks[i]->printAll();
+		disks[i]->implementRequest();
+		cout<<endl<<"After update data of disk"<<i<<endl;
+		disks[i]->printAll();
 	}
-	String writeSector(int diskAddress, char* data){
-		dchs x = new dchs(diskAddress);
-		disks[x.parityDisk].readRequest(x.c, x.h, x.s, timer);
-		timer++;
-		disks[x.d].readRequest(x.c, x.h, x.s, timer);
-		timer++;
-		//takes xor and writes new data here
-		disks[x.d].writeRequest(x.c, x.h, x.s, timer, data);
-		timer++;
-	}
-	void updateAllDisks(){
-		for(int i=0; i<D+1; i++){
-			disks[i].implementRequest();
-		}
-	}
+}
 
-	void requestHandler(int diskAddress, bool requestType, char* data){
-		if(requestType){ //read request
-			readSector(diskAddress);
-		}
-		else{
-			writeSector(diskAddress, data);
-		}
+void diskController::requestHandler(int diskAddress, bool requestType, char* data){
+	if(requestType){ //read request
+		readSector(diskAddress, data);
 	}
-};
-int main(){
-	cout<<"df";
+	else{
+		writeSector(diskAddress, data);
+	}
 }
