@@ -1,0 +1,10 @@
+
+int AM_CreateIndex(char *fileName, int indexNo,char attrType, int attrLength);
+
+int AM_DestroyIndex(char *fileName, int indexNo);
+
+int AM_DeleteEntry(int fileDesc, char attrType, int attrLength, char *value, int recId);
+
+int AM_InsertEntry(int fileDesc, char attrType, int attrLength, char *value, int recId);
+
+

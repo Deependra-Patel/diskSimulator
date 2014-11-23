@@ -1,0 +1,5 @@
+int AM_OpenIndexScan(int fileDesc, char attrType, int attrLength, int op, char *value);
+
+int AM_FindNextEntry(int scanDesc);
+
+int AM_CloseIndexScan(int scanDesc)

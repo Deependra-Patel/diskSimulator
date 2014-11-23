@@ -1,0 +1,125 @@
+initializing
+creating index
+opening index
+inserting into index
+deleting odd number records
+retrieving even number records
+0
+2
+4
+6
+8
+10
+12
+14
+16
+18
+retrieved 10 records
+PAGENUMBER = 2
+ATTRIBUTE is 0
+RECID is 0
+PAGENUMBER = 1
+PAGENUMBER = 3
+ATTRIBUTE is 2
+RECID is 2
+PAGENUMBER = 4
+PAGENUMBER = 5
+ATTRIBUTE is 4
+RECID is 4
+PAGENUMBER = 6
+PAGENUMBER = 7
+ATTRIBUTE is 6
+RECID is 6
+PAGENUMBER = 8
+PAGENUMBER = 11
+ATTRIBUTE is 8
+RECID is 8
+PAGENUMBER = 12
+PAGENUMBER = 13
+ATTRIBUTE is 10
+RECID is 10
+PAGENUMBER = 14
+PAGENUMBER = 16
+ATTRIBUTE is 12
+RECID is 12
+PAGENUMBER = 17
+PAGENUMBER = 18
+ATTRIBUTE is 14
+RECID is 14
+PAGENUMBER = 19
+PAGENUMBER = 21
+ATTRIBUTE is 16
+RECID is 16
+PAGENUMBER = 22
+ATTRIBUTE is 18
+RECID is 18
+deleting even number records
+retrieving from empty index
+retrieved 0 records
+begin test of complex delete
+inserting into index
+deleting everything
+printing empty index
+retrieved 0 records
+inserting everything back
+delete records less than 100
+delete records greater than 150
+printing between 100 and 150
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+retrieved 51 records
+closing down
+
+
+B
+B
+test3 done!

@@ -1,0 +1,67 @@
+First, copy this directory into your own testam directory.
+
+There are three test programs supplied here.
+To make the tests, edit the Makefile on the line that says
+AMLAYER= ../am/amlayer
+to supply real path name of your AM layer functions.
+You can use something like: ld -r amlayer <.o files> in your AM directory
+to link all your AM layer .o files into the file "amlayer", which
+is the file name that you supply to the Makefile for the test
+programs.
+
+Next, edit the Makefile on the line that says:
+CFLAGS= -I../h -I../am
+Change it so that it includes all the directories that
+contain the .h files that the tests are looking for.
+Specifically, the test program looks for the file "am.h",
+which will be the file that contains the error return values
+such as AME_OK, AME_EOF. You should supply the file am.h
+
+If your recId's are not integers, you should edit the file
+"testam.h" to do the correct typedef's for it. If however,
+your recId's are integers, then you don't have to worry about it.
+I've taken care to make sure that non-integer recId's would work,
+but I'm not sure because I can't test it.
+
+After you are done doing all these, type "make depend" in the
+testam directory. A new Makefile will be generated automatically. 
+This Makefile is the one that you use to compile your tests.
+If you get errors, go back to change the lines "CFLAGS="
+and the "AMLAYER="  and then type "make depend" again
+until you get it right.
+
+Before compiling  the tests, compile your amlayer in your AM directory, 
+then come back to the test program directory and type "make"
+to make all the tests.  Alternatively, you can just type "make test1"
+to make only test1. When running, the test programs create at most two files, 
+"testrel.0", and "testrel.1". Before you run the tests, make sure
+that these two files do not exist, or you will get
+a "FILE EXIST" error from the PF layer when the tests try
+to create these two files.  So the cycle of your debugging looks like:
+1) Make changes to your am layer functions.
+2) Compile all your .o files from the AM layer into "amlayer"
+3) Come to the test directory and make the tests
+4) remove the files "testrel.0" and "testrel.1", if they exist.
+5) run the test programs
+6) go back to 1 if necessary.
+
+You may find the unix commands "pushd" useful when you switch
+between two different directories. Alternatively,
+you can copy the tests into your AM directory, and modify
+the Makefile to account for that.
+
+
+As you know, you have to implement deletions withing a scan, as in test3.  But this is the only kind of this type of operation that
+you have to support. Once this is implemented, you will be
+able to do record deletions using a B+ tree scan.
+Here are some hints on how it can be implemented:
+1) Keep track of the position and the value of recId returned
+from the last AM_FindNextEntry().
+2) On the next AM_FindNextEntry(), if the recId is still there, then
+there was no deletion. Simply skip over to the next one and
+return it. If the recId is not there anymore, then there
+was a deletion, and you can  handle that accordingly.
+
+
+Good luck,
+clc
