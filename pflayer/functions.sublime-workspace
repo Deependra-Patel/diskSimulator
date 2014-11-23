@@ -1,0 +1,464 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"pre",
+				"previousCylinder"
+			],
+			[
+				"s",
+				"sectorNum"
+			],
+			[
+				"cy",
+				"cylinderNum"
+			],
+			[
+				"cyli",
+				"cylinderRequestsSet"
+			],
+			[
+				"CHS",
+				"CHSRequest"
+			],
+			[
+				"tr",
+				"traversalDirection"
+			],
+			[
+				"dis",
+				"diskNumber"
+			],
+			[
+				"inc",
+				"include"
+			],
+			[
+				"in",
+				"include"
+			],
+			[
+				"inv",
+				"inv2"
+			],
+			[
+				"do",
+				"doneLength"
+			],
+			[
+				"re",
+				"rep"
+			],
+			[
+				"main",
+				"mainloop"
+			],
+			[
+				"di",
+				"digits"
+			],
+			[
+				"temp",
+				"temp1"
+			],
+			[
+				"pow",
+				"power"
+			],
+			[
+				"po",
+				"power"
+			],
+			[
+				"str",
+				"string"
+			],
+			[
+				"ans",
+				"answer"
+			],
+			[
+				"num",
+				"numS"
+			],
+			[
+				"pr",
+				"prob"
+			],
+			[
+				"b",
+				"beginend	$1.begin(), $1.end()"
+			],
+			[
+				"cou",
+				"count"
+			],
+			[
+				"co",
+				"cout"
+			],
+			[
+				"unus",
+				"unusualA"
+			],
+			[
+				"st",
+				"string"
+			],
+			[
+				"fac",
+				"factSum"
+			],
+			[
+				"mask",
+				"netMask"
+			],
+			[
+				"def",
+				"default"
+			],
+			[
+				"maskIn",
+				"maskIndex"
+			],
+			[
+				"sp",
+				"splitAndAdd"
+			],
+			[
+				"ip",
+				"ipFind"
+			],
+			[
+				"r",
+				"root"
+			],
+			[
+				"lef",
+				"leftChild"
+			],
+			[
+				"blo",
+				"blockM"
+			],
+			[
+				"bl",
+				"blockM"
+			],
+			[
+				"net",
+				"networkAddress"
+			],
+			[
+				"be",
+				"begin"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 300.0,
+		"selected_items":
+		[
+		],
+		"width": 300.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/rohit/diskSimulator/pflayer/variables.h",
+		"/home/rohit/diskSimulator/pflayer/variables.h.gch",
+		"/home/rohit/Documents/cpp/cs 293 assignments/Assignment9/120050028_9.cpp",
+		"/home/rohit/diskSimulator/pflayer/cscope.out",
+		"/home/rohit/toydb/pflayer/buf.c",
+		"/mnt/6474844474841B46/Users/rohit23/Downloads/Dexter/Dexter Season 1/Dexter - 1x10 - Seeing Red.en.srt",
+		"/home/rohit/Desktop/crypto/fileio.cpp",
+		"/home/rohit/Desktop/cs341-endsem-solution/rec-bin-search.s",
+		"/home/rohit/Desktop/cs341-endsem-complaints.txt",
+		"/home/rohit/Desktop/transaction.java",
+		"/home/rohit/Desktop/t1.txt",
+		"/mnt/6474844474841B46/Users/rohit23/Desktop/ECC-Math Background",
+		"/home/rohit/Desktop/120050028_lab10QandA.txt",
+		"/home/rohit/temp.cpp",
+		"/home/rohit/a.log",
+		"/mnt/6474844474841B46/Users/rohit23/Music/tmp",
+		"/home/rohit/Desktop/listAllCSV.csv",
+		"/home/rohit/Desktop/tubraunschweig/JAF #1/index.html",
+		"/home/rohit/Desktop/TYTACTIC.cpp",
+		"/home/rohit/Desktop/disk_access.cpp",
+		"/home/rohit/public_html/index.html",
+		"/home/rohit/Desktop/g18_lab12/Makefile",
+		"/home/rohit/Desktop/cs378_120050028/Makefile",
+		"/home/rohit/Desktop/cs378_120050028/project/src/webS/requestQueue.java",
+		"/home/rohit/Desktop/cs378_120050028/project/src/webS/requestListener.java",
+		"/home/rohit/Desktop/cs378_120050028/project/src/webS/dataResponder.java",
+		"/home/rohit/Desktop/cs378_120050028/project/src/webS/fireWall.java",
+		"/home/rohit/Desktop/cs378_120050028/project/src/webS/passByReferenceInteger.java",
+		"/home/rohit/Desktop/cs378_120050028/project/src/webS/queuingServer.java",
+		"/home/rohit/Desktop/cs378_120050028/README",
+		"/home/rohit/Desktop/lab5.s",
+		"/home/rohit/Desktop/arch/120050028-lab05/lab5.s",
+		"/home/rohit/Desktop/arch/cs341-endsem-template/lin-search-loop.s",
+		"/home/rohit/Desktop/arch/cs341-endsem-template/answers.txt",
+		"/home/rohit/Desktop/arch/cs341-endsem-template/lin-search-loop-delayed-branch.s",
+		"/home/rohit/Desktop/arch/120050028-lab05/exceptions-rohit.s",
+		"/home/rohit/Desktop/arch/120050028_lab06/cs341-lab6.s",
+		"/home/rohit/Desktop/arch/120050028-lab07/loop_unrolling.s",
+		"/home/rohit/Desktop/arch/120050028-lab07/scheduled_code.s",
+		"/home/rohit/Desktop/arch/120050028-lab07/scheduled_loop_unrolling.s",
+		"/home/rohit/Desktop/arch/120050028-lab07/120050028.txt",
+		"/home/rohit/Desktop/arch/120050028-lab07/lab7.s",
+		"/home/rohit/Desktop/arch/120050028_lab06/120050028-lab06.txt",
+		"/home/rohit/Desktop/arch/winmips64/factorial.s",
+		"/home/rohit/Desktop/arch/120050067-5/lab5.s",
+		"/home/rohit/Desktop/arch/120050005-05/lab5.s",
+		"/home/rohit/Desktop/arch/120050044_lab8/lab8-answers.txt",
+		"/home/rohit/Desktop/arch/120050044_lab8/script2.sh",
+		"/home/rohit/Desktop/arch/120050044_lab8/script.sh",
+		"/home/rohit/Desktop/arch/120050044_lab8/script3.sh",
+		"/home/rohit/Desktop/arch/120050044_lab8/script4.sh",
+		"/home/rohit/Desktop/arch/120050067-5/exceptions.s",
+		"/home/rohit/Desktop/arch/120050067-5/exceptions-akhil.s",
+		"/home/rohit/Desktop/120050028_35_lab10/120050028_35_lab10.txt",
+		"/home/rohit/Desktop/arch/120050005-05/exceptions-aakash.s",
+		"/home/rohit/Desktop/arch/120050044_lab8/text",
+		"/home/rohit/Desktop/120050044_lab8.tar.gz",
+		"/home/rohit/Desktop/arch/d4-traces/tex.din",
+		"/home/rohit/Desktop/exceptions.s",
+		"/home/rohit/Desktop/arch/120050028-lab04/gcd-opt.s",
+		"/home/rohit/Desktop/arch/120050028-lab04/remove_asm_directives.pl",
+		"/home/rohit/Desktop/arch/120050028-lab04/count.awk",
+		"/home/rohit/Desktop/arch/120050028-lab04/result-opt",
+		"/home/rohit/Desktop/arch/120050028-lab04/result-noopt",
+		"/home/rohit/Desktop/arch/120050028-lab04/120050028-04.txt",
+		"/home/rohit/Desktop/arch/120050028-lab04/asmutils.s",
+		"/home/rohit/Desktop/arch/120050028-lab04/gcd-noopt.s",
+		"/home/rohit/Desktop/arch/120050028-lab04/gcd.c",
+		"/home/rohit/Desktop/arch/120050028-lab03/merge-sort.s",
+		"/home/rohit/Desktop/arch/120050028-lab03/120050028-lab03.txt",
+		"/home/rohit/Desktop/arch/120050028-lab03/factorial.s",
+		"/home/rohit/Desktop/arch/120050028-lab03/f.s",
+		"/home/rohit/Desktop/arch/120050028-lab02/merge.s",
+		"/home/rohit/Desktop/arch/120050028-lab02/add.s",
+		"/home/rohit/Desktop/arch/120050028-lab02/120050028-lab02.txt",
+		"/home/rohit/Desktop/arch/120050028-lab01/add.s",
+		"/home/rohit/Desktop/arch/120050028-lab01/add1.s",
+		"/home/rohit/Desktop/arch/120050028-lab01/Ans",
+		"/home/rohit/Desktop/arch/120050028-lab01/Answers",
+		"/home/rohit/Desktop/arch/120050028-lab01/euclid-gcd.s",
+		"/home/rohit/Desktop/arch/120050028-lab01/import java.io.IOException;",
+		"/home/rohit/Desktop/out.csv",
+		"/home/rohit/Desktop/o.csv",
+		"/home/rohit/Desktop/while(readLine!=null && !readLine.equals(\"\"))",
+		"/home/rohit/Desktop/listAllCSV_winter.csv",
+		"/home/rohit/Desktop/listAllCSV_summer.csv",
+		"/home/rohit/.cache/.fr-UosYyc/120050028_lab8/script4.sh",
+		"/home/rohit/Downloads/120050028_lab8/script4.sh",
+		"/home/rohit/Downloads/120050028_lab8/script.sh",
+		"/home/rohit/Downloads/120050028_lab8/lab8-answers.txt",
+		"/home/rohit/Downloads/120050028_lab8/script2.sh",
+		"/home/rohit/Downloads/120050028_lab8/script3.sh",
+		"/home/rohit/Desktop/networkslab7/sampleIO/120050028-lab07/trie.cpp",
+		"/home/rohit/Desktop/networkslab7/sampleIO/120050028-lab07/utils.cpp",
+		"/home/rohit/public_html/import java.io.BufferedReader;",
+		"/home/rohit/Desktop/stats.txt",
+		"/home/rohit/Documents/Acads/socio/syllabus.txt",
+		"/home/rohit/toydb/pflayer/testpf.c",
+		"/home/rohit/Documents/cpp/spoj/NOSQ.cpp",
+		"/home/rohit/Desktop/temp.html",
+		"/home/rohit/Desktop/SVM3.pdf",
+		"/home/rohit/toydb/pflayer/pf.c",
+		"/home/rohit/Documents/cpp/ways.cpp",
+		"/home/rohit/Documents/cpp/spoj/ty.cpp",
+		"/home/rohit/toydb/pflayer/pftypes.h",
+		"/home/rohit/toydb/pflayer/pf.h",
+		"/run/user/1000/gvfs/sftp:host=mars.cse.iitb.ac.in/users/ug12/rohit/Desktop/pa4-files/answers.txt",
+		"/run/user/1000/gvfs/sftp:host=mars.cse.iitb.ac.in/users/ug12/rohit/Desktop/pa4-files/lab9.txt",
+		"/home/rohit/toydb/amlayer/amsearch.c",
+		"/home/rohit/toydb/pflayer/pf.h~",
+		"/home/rohit/toydb/pflayer/IMP.DOC",
+		"/home/rohit/toydb/pflayer/hash.c",
+		"/home/rohit/toydb/pflayer/Makefile",
+		"/home/rohit/toydb/pflayer/file2",
+		"/home/rohit/toydb/pflayer/file1",
+		"/home/rohit/toydb/pflayer/cscope.out",
+		"/home/rohit/toydb/pflayer/a.out",
+		"/home/rohit/toydb/pflayer/.project",
+		"/home/rohit/toydb/pflayer/temp.txt",
+		"/home/rohit/toydb/pflayer/temp2",
+		"/home/rohit/toydb/pflayer/testhash.c",
+		"/home/rohit/toydb/pflayer/.cproject",
+		"/home/rohit/Desktop/script.txt",
+		"/home/rohit/Desktop/Changes in friendship.txt",
+		"/home/rohit/Desktop/g18_lab12/chat_log_24-09-14.txt",
+		"/home/rohit/Documents/cpp/cppthreads.cpp",
+		"/home/rohit/LICENSE",
+		"/home/rohit/Documents/server.java"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"		\n",
+			"<br />",
+			"main",
+			"syscall",
+			"__start",
+			"<br />",
+			"table",
+			"rohit ku",
+			"rohit k",
+			"<span class=\"gridCols\">",
+			"PFbufInsertFree",
+			"PFfreebpage",
+			"PFbpage",
+			"bpage",
+			"pfbufunfi",
+			"PF_MAX_BUFS",
+			".push_back(",
+			"int",
+			"lint",
+			"/=",
+			",",
+			"int"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"my",
+			"[] = ",
+			"lint",
+			"int",
+			">>",
+			"cin"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "functions.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 208.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
