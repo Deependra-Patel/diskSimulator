@@ -30,3 +30,4 @@ clean:
 	rm *~
 	rm testhash
 	rm testpf
+	rm a.out
