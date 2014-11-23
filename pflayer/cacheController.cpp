@@ -1,9 +1,12 @@
+#include "cacheController.h"
 cacheController::cacheController(){
 	curSize = 0;
 	free = new bool[cacheSize];
 	dirty = new bool[cacheSize];
+	diskAddressOfPage = new int[cacheSize];
 	dC = new diskController();
 	for(int i=0; i<cacheSize; i++){
+		diskAddressOfPage[i] = -1;
 		free[i] = true;
 		dirty[i] = false;
 	}
@@ -21,10 +24,13 @@ int cacheController::getFreePage(){
 		}
 	}
 	 //Have to remove any dirty page using lru
-	if(!list.empty()){
-		int freed = list.front();
-		list.pop_front();
-		dC->requestHandler(diskAddress, false, "data"); //writing back dirty blocks
+	if(!accessOrder.empty()){
+		int freed = accessOrder.front();
+		accessOrder.pop_front();
+		int diskAddress = diskAddressOfPage[freed];
+		char data[100];
+		strcpy(data, "data");
+		dC->requestHandler(diskAddress, false, data); //writing back dirty blocks
 		dirty[freed] = false;
 		return freed;
 	}
@@ -35,28 +41,33 @@ void cacheController::putPageInCache(int diskAddress, bool read){
 	diskAddressCacheMap[diskAddress] = freePage;//putting page in cache
 	accessOrder.push_back(freePage);
 	curSize ++;	
+	diskAddressOfPage[freePage] = diskAddress;
 	if(!read)
 		dirty[freePage] = true;
 }
 void cacheController::fetchPageFromDisk(int diskAddress){
+	cout<<"fetchPageFromDisk: "<<diskAddress<<endl;
 	std::unordered_map<int, int>::const_iterator got = diskAddressCacheMap.find(diskAddress);
 	if(got == diskAddressCacheMap.end()){
 		cout<<"Page not found in cache"<<endl;
-		dC->requestHandler(diskAddress, true, "data");
-		putPageInCache(diskAddress);
+		char data[100];
+		strcpy(data, "data");
+		dC->requestHandler(diskAddress, true, data);
+		putPageInCache(diskAddress, true);
 	}
 	else { //found
-		cout<<"Page found in cache";
+		cout<<"Page found in cache"<<endl;
 	}
 }
 void cacheController::writePageToDisk(int diskAddress){
+	cout<<"writePageToDisk: "<<diskAddress<<endl;
 	std::unordered_map<int, int>::const_iterator got = diskAddressCacheMap.find(diskAddress);
 	if(got == diskAddressCacheMap.end()){
 		cout<<"Page not found in cache"<<endl;
-		putPageInCache(diskAddress);
+		putPageInCache(diskAddress, false);
 	}
 	else { //found
-		cout<<"Page found in cache";
-		dirty[*got] = true;
+		cout<<"Page found in cache"<<endl;
+		dirty[got->second] = true;
 	}
 }

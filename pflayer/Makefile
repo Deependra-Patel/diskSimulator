@@ -30,3 +30,6 @@ clean:
 
 compile:
 	g++ diskController.cpp diskRequestHandler.cpp main.cpp
+
+compile2:
+	g++ -std=c++11 mainController.cpp cacheController.cpp diskController.cpp diskRequestHandler.cpp main.cpp -o disk.exe

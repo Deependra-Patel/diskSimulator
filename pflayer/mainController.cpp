@@ -1,14 +1,12 @@
 #include "mainController.h"
 
 mainControllerStruct::mainControllerStruct(){
-	pagesInDisk = D*M*K;
-	cacheControllerStruct = new cacheController();
+	pagesInDisk = N*M*K;
 }
 
 // fileNum, pagenum -> diskaddress
 void mainControllerStruct::diskRequest(int fileNum, int pagenum, int requestType){
-	srand(time(NULL));
-	map<int,int>::iterator it = addressmap.find(pagenum);
+	map<int,int>::iterator it = addressmap.find(fileNum);
 
 	if (requestType == 1){
 		/**
@@ -20,7 +18,7 @@ void mainControllerStruct::diskRequest(int fileNum, int pagenum, int requestType
 			printf("%s\n", "No such file exists in disk. Bad access Request.");
 		}
 		else{
-			cacheControllerStruct->fetchPageFromDisk((fileNum * pagesInDisk) + it->second);	
+			cacheControllerStruct.fetchPageFromDisk((pagenum * pagesInDisk) + it->second);	
 		}
 		
 	}
@@ -33,15 +31,17 @@ void mainControllerStruct::diskRequest(int fileNum, int pagenum, int requestType
 		int answer;
 
 		if (it != addressmap.end()){
-			answer = (fileNum*pagesInDisk) + it->second;
+			answer = (pagenum*pagesInDisk) + it->second;
 		}
 		else{
-			int newPageNum = rand()%pagesInDisk;
-			map[pagenum] = newPageNum;	// Insert entry in map
-			answer = (fileNum*pagesInDisk) + newPageNum;
+			
+			int newFileNum = rand()%pagesInDisk;
+			
+			addressmap[fileNum] = newFileNum;	// Insert entry in map
+			answer = (pagenum*pagesInDisk) + newFileNum;
 		}
 
-		cacheControllerStruct->writePageToDisk(answer);
+		cacheControllerStruct.writePageToDisk(answer);
 	}
 	else{
 		/**

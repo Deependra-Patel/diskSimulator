@@ -16,7 +16,7 @@ struct dchs{
 };
 
 diskController::diskController(){
-	cout<<"Initializing disk diskController"<<endl;
+	cout<<"Initializing diskController"<<endl;
 	timer = 0;
 	disks = new disk*[D+1];
 	for(int i=0; i<D+1; i++){
