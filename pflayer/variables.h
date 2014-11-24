@@ -10,7 +10,7 @@
 
 #define rpm 10000 //Rounds per minute for hard disk
  
-#define cacheSize 1000
+#define cacheSize 10000
 
 #define cacheEffect true
 

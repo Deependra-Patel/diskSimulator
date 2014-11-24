@@ -22,6 +22,7 @@ int cacheController::getFreePage(){
 	curSize --;
 	for(int i=0; i<cacheSize; i++){ //if page is not dirty
 		if(!dirty[i]){
+			diskAddressCacheMap.erase(diskAddressOfPage[i]);
 			return i;
 		}
 	}
@@ -33,6 +34,7 @@ int cacheController::getFreePage(){
 		char data[100];
 		strcpy(data, "data");
 		dC->requestHandler(diskAddress, false, data); //writing back dirty blocks
+		diskAddressCacheMap.erase(diskAddress);
 		dirty[freed] = false;
 		return freed;
 	}

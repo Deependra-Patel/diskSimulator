@@ -131,5 +131,18 @@ On switching on the cache, seeks and block transfers decreases eventually decrea
 \includegraphics[scale = 0.60]{images/table3.png}\\
 
 For same number of total disk size, we increased the RAID level and found that as we increase raid level total time taken for same requests is decreased. This is due to dispersion of requests among many disks.
+
+\includegraphics[scale = 0.60]{images/table4.png}\\
+Graphs for the above table are
+
+\includegraphics[scale = 0.60]{images/cache.png}\\
+
+We can see that the cache hit ratio(\#cache-hits/\#total-accesses) decreases as cache size increases. More pages can be stored increasing number of cache hits.
+
+
+\includegraphics[scale = 0.50]{images/cache2.png}\\
+
+As the cache size increases, the time taken to execute reduces drastically after some time. This is because some pages are already cached which need not be written back or read from the disk. As size of cache increases more such pages can be cached.
+
 \end{document}
 
