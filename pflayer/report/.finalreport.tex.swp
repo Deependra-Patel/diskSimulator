@@ -1,0 +1,58 @@
+\documentclass[11pt]{article}
+
+\usepackage{graphicx}
+\usepackage[left=1.2in,top=1.0in,right=1.2in,bottom=0.75in]{geometry} % Document margins
+
+\title{\textbf{Toy DB Project Report \\ 
+	Disk Storage Simulator \\
+	Project No. 2 }}
+
+\author{Rohit Kumar \\ 120050028 \\ rohit@cse.iitb.ac.in
+		\and 
+		Deependra Patel \\ 120050032 \\ pateldeependra06@gmail.com
+		}
+
+\date{}
+\begin{document}
+
+\maketitle
+
+\section{Introduction}
+\paragraph{}
+	This report talks about a strategic simulation of a disk system. The simulation includes an efficient arm movement strategy for processing the requests on a disk system, providing reliability, high performance through implementation of the \textbf{RAID-5} technology and caching unit for faster access. 
+
+This disk-system is accessed by the paged file module provided at the starting of the project. The statistics related to various performance parameters are gathered and various conclusions and effect of the technologies used are displayed through graphs etc.
+	
+\section{Structure of the disk-system}
+\paragraph{}
+A main controller controls and executes all the functionalities provided. This is the structure that is accessed by the paged file module and acts as an interface between the PF layer and the disk.
+
+The main controller provides a mapping of page number to disk addresses. It has an access to a cache controller which manages the disk cache and interfaces between the disk-system and the main controller. The cache controller checks if the data is present in the cache and returns it. If not present, it passes the request to a disk controller which simulates the disk-system. The disk controller passes this request to a request buffer which in turn processes these requests using the elevator algorithm.
+
+While processing the requests various logs and data relating to measure the performance parameters etc. are also being stored.
+
+The details of the various data structures and algorithms used in these classes are described in the below section.
+
+\section{Data Structures and Algorithm used for various classes}
+
+\subsection{Main Controller (mainController.cpp \& mainController.h)}
+\paragraph{}
+
+\end{document}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
