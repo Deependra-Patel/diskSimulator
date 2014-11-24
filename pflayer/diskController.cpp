@@ -9,7 +9,7 @@ struct dchs{
 		if(parityDisk<=temp)
 			d = temp+1;
 		else d = temp;
-		c = (blockNoInDisk/(M*K))%N;
+		c = blockNoInDisk/(M*K);
 		h = (blockNoInDisk/K)%M;
 		s = (blockNoInDisk)%K;
 	}

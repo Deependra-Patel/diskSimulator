@@ -51,20 +51,47 @@ Cache for disks is implemented in this class. We have implemented fully associat
 
 For page allocation, if any page is free that is allocated. If no free page found then page which is not dirty is allocated, if no such found then Least Recently Used(LRU) page is allocated after writing its contents to the disk.
 
+An unordered map is used to keep mapping of disk address to corresponding page number in cache. Two boolean arrays of free pages and dirty pages is also kept. Whenever a page is written in cache, dirty flag is marked true. If any page marked dirty is to be removed from cache then its data has to be written back to disk. A linked list of pages is kept to store the allocated pages ordered by time. LRU is implemented on these pages by popping out first element on page allocation and pushing back the newly allocated page.
+
 \subsection{Disk-System Controller \\ (diskController.cpp \& diskController.h)}
 \paragraph{}
-Disk Controller handles all the requests(read/write) made to the disk. The input disk address is first translated into corresponding disk and CHS(Cylinder Head Sector) format. As we are using RAID5, parity disk for that sector is also calculated. For numbering, we are using Right Asynchronous RAID5 type as given below:
+Disk Controller handles all the requests(read/write) made to the disk. The input disk address is first translated into corresponding disk and CHS(Cylinder Head Sector) format. As we are using RAID5, parity disk for that sector is also calculated. For calculating disk number, we are using Right Asynchronous RAID5 type as given below:
 \begin{center}
-\includegraphics[scale=0.5]{raid5.png}
+\includegraphics[scale=0.9]{images/raid5.png}
 \end{center}
+
+\begin{center}
+\includegraphics[scale=0.5]{images/disk.png}
+\end{center}
+Disk Number and CHS conversion \\
+Let there be D disks are used in RAID5 (D+1 in total), each with each with N cylinders, M tracks/cylinder, and K sectors per track. Then the disk address of this sector can be calculated as :
+\\
+d is the disk number. d  ∈ {0, 1, 2, …  D} \\
+c is the cylinder number. c  ∈ {0, 1, 2, … N - 1} \\
+t is the head/track number. h ∈ {0, 1, 2, … M - 1} \\
+s is the sector number. s ∈ {0, 1, 2, … K - 1} \\
+p is parity disk corresponding to a chs \\
+a is address in that disk \\
+So, given the disk address, c,h and s can be calculated  as:
+a = DiskAddress/D;
+p = a%(D+1)
+if p<=DiskAddress%D
+then d = DiskAddress%D
+else d = DiskAddress%D + 1
+c = a/(M*K) \\
+t = [ a/K ] modulo M \\
+s = a modulo K \\
 
 An array of all disk objects are created and read/write operations are done on them. \\
 Two types of operations: \\
 Read Sector -  Sector is read from the corresponding disk and returned back \\
 Write Sector - Both the requested and parity blocks are first read. XOR of bits of old data, the new data and the parity block is written back to parity block. New data is written to the corresponding sector.
 
-\subsection{Request Buffer and Elevator algorithm \\ (diskRequestHandler.cpp \& diskRequestHandler.h)}
+After any operation, one pending request from buffer of each disk is executed.
+
+\subsection{Disk Request Buffer and Elevator algorithm \\ (diskRequestHandler.cpp \& diskRequestHandler.h)}
 \paragraph{}
+
 This contains a class which places the requests into a request buffer and processes it using the elevator algorithm. A data-structure for every request is created which also stores the time-stamp of the request.
 
 These requests are stored in the set data structure provided by the STL of C++.
