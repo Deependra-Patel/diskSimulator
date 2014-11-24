@@ -113,6 +113,23 @@ In this manner the requests will be served until the start/end of the tree has b
 
 While the traversal is being done, various statistics are being gathered like the number of times the cylinder switch is happening (i.e. the arm movement), the rotational latency incurred and the track switch. Printing the requests in the buffer is also supported which shows how the requests are being processed and queued up.
 
+\subsection{Statistics \\ (main.cpp \& testData.py)}
+\paragraph{}
+For computing the statistics data, first we wrote all the file pages. Then some number of requests are randomly generated which accesses disks to read or write data. Global flags cacheEffect and elevatorEffect are kept which can be changed true/false and all classes works correspondingly.
 
+\includegraphics[scale = 0.60]{images/table1.png}\\
+We plot the graphs of given table.
+
+\includegraphics[scale = 0.60]{images/img0.png}\\
+From the above graph, we can see that for a given number of requests, Number of seeks without elevator algorithm is greater than that without it. In elevator algorithm, requests are sorted in order of cylinder number.Therefore requests on same cylinder can be completed without making any seek. Thus extra seek time is avoided using elevator algorithm.
+\includegraphics[scale = 0.60]{images/img1.png} \\
+From the above graph, we can see for a given number of requests total time taken with elevator algorithm is always less than that without it. 
+
+\includegraphics[scale = 0.60]{images/table2.png}\\
+
+On switching on the cache, seeks and block transfers decreases eventually decreasing the total time. Disk addresses are accessed randomly therefore cache hit ratio is not much higher. 
+\includegraphics[scale = 0.60]{images/table3.png}\\
+
+For same number of total disk size, we increased the RAID level and found that as we increase raid level total time taken for same requests is decreased. This is due to dispersion of requests among many disks.
 \end{document}
 

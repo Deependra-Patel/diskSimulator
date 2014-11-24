@@ -45,3 +45,6 @@ compile2:
 elevatorDemo:
 	g++ elevatorDemo.cpp diskRequestHandler.cpp
 	./a.out
+cacheDemo:
+	g++ -std=c++11 cacheController.cpp diskController.cpp diskRequestHandler.cpp cacheDemo.cpp
+	./a.out

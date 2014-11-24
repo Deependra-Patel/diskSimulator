@@ -101,19 +101,19 @@ void disk::implementRequest(){
 }
 
 void disk::printAll(){
-	if (elevatorEffect){
-		set<CHSRequest>::iterator it = cylinderRequestsSet.begin();
-		while(it!=cylinderRequestsSet.end()){
-			cout << it->cylinderNum << ", ";
-			it++;
-		}
-	}
-	else{
-		list <CHSRequest>::iterator it = withoutElevatorList.begin();
-		while(it!=withoutElevatorList.end()){
-			cout << it->cylinderNum << ", ";
-			it++;
-		}	
-	}
-	cout<<endl;
+	// if (elevatorEffect){
+	// 	set<CHSRequest>::iterator it = cylinderRequestsSet.begin();
+	// 	while(it!=cylinderRequestsSet.end()){
+	// 		cout << it->cylinderNum << ", ";
+	// 		it++;
+	// 	}
+	// }
+	// else{
+	// 	list <CHSRequest>::iterator it = withoutElevatorList.begin();
+	// 	while(it!=withoutElevatorList.end()){
+	// 		cout << it->cylinderNum << ", ";
+	// 		it++;
+	// 	}	
+	// }
+	// cout<<endl;
 }

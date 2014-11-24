@@ -1,6 +1,6 @@
-#define D 11 //no of disks
-#define N 909 //no. of cylinders
-#define M 5 //no. of tracks/cylinder
+#define D 5 //no of disks
+#define N 1000 //no. of cylinders
+#define M 10 //no. of tracks/cylinder
 #define K 100 //no. of sectors/track
 
 #define cylinderSwitchK 0.01 //Variables to calculate cylinder switch time
