@@ -10,4 +10,5 @@ struct mainControllerStruct
 	mainControllerStruct();
 	void diskRequest(int fileNum, int pagenum, int requestType);
 	void writeBackCache();
+	void printAll();
 };

@@ -19,6 +19,7 @@ struct CHSRequest{
 struct disk
 {
 	int diskTimer;
+	int seeks;
 	set<CHSRequest> cylinderRequestsSet;
 	list<CHSRequest> withoutElevatorList;
 	bool traversalDirection; 

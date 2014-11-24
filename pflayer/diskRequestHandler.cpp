@@ -25,16 +25,17 @@ disk::disk(){
 	previousCylinder = 0;
 	previousTrack = 0;
 	previousSector = 0;
+	seeks = 0;
 }
 // elevatorEffect
 
 void disk::putRequest(int cNum, int tNum, int sNum, int t, bool requestType, char* data){
 	if (elevatorEffect){
-		cout<<"Putting request(with elevator) (cNum, tNum, sNum, t, requestType, data) "<<cNum<<", "<<tNum<<", "<<sNum<<", "<<t<<", "<<requestType<<", "<<data<<", "<<endl;
+		//cout<<"Putting request(with elevator) (cNum, tNum, sNum, t, requestType, data) "<<cNum<<", "<<tNum<<", "<<sNum<<", "<<t<<", "<<requestType<<", "<<data<<", "<<endl;
 		cylinderRequestsSet.insert(CHSRequest(cNum, tNum, sNum, t, requestType, data));
 	}
 	else{
-		cout<<"Putting request(without elevator) (cNum, tNum, sNum, t, requestType, data) "<<cNum<<", "<<tNum<<", "<<sNum<<", "<<t<<", "<<requestType<<", "<<data<<", "<<endl;
+		//cout<<"Putting request(without elevator) (cNum, tNum, sNum, t, requestType, data) "<<cNum<<", "<<tNum<<", "<<sNum<<", "<<t<<", "<<requestType<<", "<<data<<", "<<endl;
 		withoutElevatorList.push_back(CHSRequest(cNum, tNum, sNum, t, requestType, data));
 	}
 }
@@ -49,13 +50,13 @@ void disk::writeRequest(int cNum, int tNum, int sNum, int t, char* data){
 }
 
 void disk::implementRequest(){
+	CHSRequest currentRequest;
 	if (elevatorEffect){
 		if (cylinderRequestsSet.empty()) return;
 		if (itr == cylinderRequestsSet.end()){
 				itr--;
 				traversalDirection = false;
 			}
-		CHSRequest currentRequest;
 		if (traversalDirection){
 			
 			currentRequest = *itr;
@@ -81,12 +82,14 @@ void disk::implementRequest(){
 				itr = temp;
 			}
 		}
-
+		if(currentRequest.cylinderNum != previousCylinder)
+			seeks++;
 	}
 	else{
 		if (withoutElevatorList.empty()) return;
-		CHSRequest currentRequest = withoutElevatorList.front();
+		currentRequest = withoutElevatorList.front();
 		withoutElevatorList.pop_front();
+		seeks++;
 	}
 
 	diskTimer += cylinderSwitch(abs(currentRequest.cylinderNum - previousCylinder)) + 
@@ -98,7 +101,7 @@ void disk::implementRequest(){
 }
 
 void disk::printAll(){
-	if (elevatorEffect){
+/*	if (elevatorEffect){
 		set<CHSRequest>::iterator it = cylinderRequestsSet.begin();
 		while(it!=cylinderRequestsSet.end()){
 			cout << it->cylinderNum << ", ";
@@ -112,5 +115,5 @@ void disk::printAll(){
 			it++;
 		}	
 	}
-	cout<<endl;
+	cout<<endl;*/
 }

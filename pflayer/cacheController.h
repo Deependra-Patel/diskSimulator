@@ -8,6 +8,8 @@ struct  cacheController{
 	list<int> accessOrder;
 	unordered_map<int, int> diskAddressCacheMap;
 	int curSize;
+	int cacheHit;
+	int cacheMiss;
 	diskController* dC;
 	int *diskAddressOfPage;
 	cacheController();
@@ -16,4 +18,5 @@ struct  cacheController{
 	void fetchPageFromDisk(int diskAddress);
 	void writePageToDisk(int diskAddress);
 	void writeBackAllDirty();
+	void printAll();
 };

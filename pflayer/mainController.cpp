@@ -69,3 +69,7 @@ void mainControllerStruct::diskRequest(int fileNum, int pagenum, int requestType
 void mainControllerStruct::writeBackCache(){
 	cacheControllerStruct.writeBackAllDirty();
 }
+
+void mainControllerStruct::printAll(){
+	cacheControllerStruct.printAll();
+}

@@ -5,6 +5,8 @@ cacheController::cacheController(){
 	dirty = new bool[cacheSize];
 	diskAddressOfPage = new int[cacheSize];
 	dC = new diskController();
+	cacheHit = 0;
+	cacheMiss = 0;
 	for(int i=0; i<cacheSize; i++){
 		diskAddressOfPage[i] = -1;
 		free[i] = true;
@@ -50,28 +52,48 @@ void cacheController::putPageInCache(int diskAddress, bool read){
 }
 void cacheController::fetchPageFromDisk(int diskAddress){
 	cout<<"fetchPageFromDisk: "<<diskAddress<<endl;
-	std::unordered_map<int, int>::const_iterator got = diskAddressCacheMap.find(diskAddress);
-	if(got == diskAddressCacheMap.end()){
-		cout<<"Page not found in cache"<<endl;
-		char data[100];
-		strcpy(data, "data");
-		dC->requestHandler(diskAddress, true, data);
-		putPageInCache(diskAddress, true);
+	char data[100];
+	strcpy(data, "data");
+	if(cacheEffect){
+		std::unordered_map<int, int>::const_iterator got = diskAddressCacheMap.find(diskAddress);
+		if(got == diskAddressCacheMap.end()){
+			cacheMiss++;
+			cout<<"Page not found in cache"<<endl;
+			char data[100];
+			strcpy(data, "data");
+			dC->requestHandler(diskAddress, true, data);
+			putPageInCache(diskAddress, true);
+		}
+		else { 
+			cacheHit++;
+			cout<<"Page found in cache"<<endl;
+		}
 	}
-	else { //found
-		cout<<"Page found in cache"<<endl;
+	else {
+		cacheMiss++;
+		dC->requestHandler(diskAddress, true, data); //directly reading	
 	}
 }
 void cacheController::writePageToDisk(int diskAddress){
+	char data[100];
+	strcpy(data, "data");
 	cout<<"writePageToDisk: "<<diskAddress<<endl;
-	std::unordered_map<int, int>::const_iterator got = diskAddressCacheMap.find(diskAddress);
-	if(got == diskAddressCacheMap.end()){
-		cout<<"Page not found in cache"<<endl;
-		putPageInCache(diskAddress, false);
+	if(cacheEffect){
+		std::unordered_map<int, int>::const_iterator got = diskAddressCacheMap.find(diskAddress);
+		if(got == diskAddressCacheMap.end()){
+			cacheMiss++;
+			cout<<"Page not found in cache"<<endl;
+			putPageInCache(diskAddress, false);
+		}
+		else { //found
+			cacheHit++;
+			cout<<"Page found in cache"<<endl;
+			dirty[got->second] = true;
+		}
 	}
-	else { //found
-		cout<<"Page found in cache"<<endl;
-		dirty[got->second] = true;
+	else {
+		cacheMiss++;
+		dC->requestHandler(diskAddress, false, data); //directly writing
 	}
 }
 void cacheController::writeBackAllDirty(){
@@ -82,7 +104,14 @@ void cacheController::writeBackAllDirty(){
 			char data[100];
 			strcpy(data, "data");
 			cout<<diskAddress<<endl;
-			//dC->requestHandler(diskAddress, false, data);
+			dC->requestHandler(diskAddress, false, data);
 		}
 	}
+}
+void cacheController::printAll(){
+	cout<<"Priting Cache Data-------------------\n";
+	cout<<"Cache Hits: "<<cacheHit<<endl;
+	cout<<"Cache Miss: "<<cacheMiss<<endl;
+	cout<<"Cache hit Ratio: "<<(float)(cacheHit)/(float)(cacheHit + cacheMiss)<<endl;
+	dC->printAll();
 }
