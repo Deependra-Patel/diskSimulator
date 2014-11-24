@@ -55,7 +55,9 @@ This main controller passes the requests to the cache controller for performing 
 
 \subsection{Request Buffer and Elevator algorithm \\ (diskRequestHandler.cpp \& diskRequestHandler.h)}
 \paragraph{}
-This contains a class which places the requests into a request buffer and processes it using the elevator algorithm. The 
+This contains a class which places the requests into a request buffer and processes it using the elevator algorithm. A data-structure for every request is created which also stores the time-stamp of the request.
+
+These requests are stored in the set data structure provided by the STL of C++.
 
 Upon serving a particular request, the arm will now move to the next closest request in the direction of movement. This request will be obtained by iterating over the tree data structure. The first element of a tree is always the leftmost one. The next element after an element is the first element of its right subtree. If the element does not have a right child, the next element is the element's first right ancestor. If the element has neither a right child nor a right ancestor, it is the rightmost element and it's last in iteration. In this manner the requests will be served until the end/start of the tree has been reached (depending on the direction of the movement). At this movement the direction of iteration will be reversed. 
 
