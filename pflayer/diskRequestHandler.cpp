@@ -26,10 +26,17 @@ disk::disk(){
 	previousTrack = 0;
 	previousSector = 0;
 }
+// elevatorEffect
 
 void disk::putRequest(int cNum, int tNum, int sNum, int t, bool requestType, char* data){
-	cout<<"Putting request (cNum, tNum, sNum, t, requestType, data) "<<cNum<<", "<<tNum<<", "<<sNum<<", "<<t<<", "<<requestType<<", "<<data<<", "<<endl;
-	cylinderRequestsSet.insert(CHSRequest(cNum, tNum, sNum, t, requestType, data));
+	if (elevatorEffect){
+		cout<<"Putting request(with elevator) (cNum, tNum, sNum, t, requestType, data) "<<cNum<<", "<<tNum<<", "<<sNum<<", "<<t<<", "<<requestType<<", "<<data<<", "<<endl;
+		cylinderRequestsSet.insert(CHSRequest(cNum, tNum, sNum, t, requestType, data));
+	}
+	else{
+		cout<<"Putting request(without elevator) (cNum, tNum, sNum, t, requestType, data) "<<cNum<<", "<<tNum<<", "<<sNum<<", "<<t<<", "<<requestType<<", "<<data<<", "<<endl;
+		withoutElevatorList.push_back(CHSRequest(cNum, tNum, sNum, t, requestType, data));
+	}
 }
 
 void disk::readRequest(int cNum, int tNum, int sNum, int t, char* data){
@@ -42,37 +49,46 @@ void disk::writeRequest(int cNum, int tNum, int sNum, int t, char* data){
 }
 
 void disk::implementRequest(){
-	if (cylinderRequestsSet.empty()) return;
-	if (itr == cylinderRequestsSet.end()){
-			itr--;
-			traversalDirection = false;
-		}
-	CHSRequest currentRequest;
-	if (traversalDirection){
-		
-		currentRequest = *itr;
-		set<CHSRequest>::iterator temp = itr;
-		temp++;
-		cylinderRequestsSet.erase(itr);
-		itr = temp;
-	}
-	else{
-
-		currentRequest = *itr;
-		if (itr == cylinderRequestsSet.begin()){
+	if (elevatorEffect){
+		if (cylinderRequestsSet.empty()) return;
+		if (itr == cylinderRequestsSet.end()){
+				itr--;
+				traversalDirection = false;
+			}
+		CHSRequest currentRequest;
+		if (traversalDirection){
+			
+			currentRequest = *itr;
 			set<CHSRequest>::iterator temp = itr;
 			temp++;
 			cylinderRequestsSet.erase(itr);
 			itr = temp;
-			traversalDirection = true;
 		}
 		else{
-			set<CHSRequest>::iterator temp = itr;
-			temp--;
-			cylinderRequestsSet.erase(itr);
-			itr = temp;
+
+			currentRequest = *itr;
+			if (itr == cylinderRequestsSet.begin()){
+				set<CHSRequest>::iterator temp = itr;
+				temp++;
+				cylinderRequestsSet.erase(itr);
+				itr = temp;
+				traversalDirection = true;
+			}
+			else{
+				set<CHSRequest>::iterator temp = itr;
+				temp--;
+				cylinderRequestsSet.erase(itr);
+				itr = temp;
+			}
 		}
+
 	}
+	else{
+		if (withoutElevatorList.empty()) return;
+		CHSRequest currentRequest = withoutElevatorList.front();
+		withoutElevatorList.pop_front();
+	}
+
 	diskTimer += cylinderSwitch(abs(currentRequest.cylinderNum - previousCylinder)) + 
 				trackSwitch(currentRequest.headNum, previousTrack) + sectorSwitch(currentRequest.sectorNum, previousSector);
 
@@ -82,10 +98,19 @@ void disk::implementRequest(){
 }
 
 void disk::printAll(){
-	set<CHSRequest>::iterator it = cylinderRequestsSet.begin();
-	while(it!=cylinderRequestsSet.end()){
-		cout<<it->cylinderNum<<", ";
-		it++;
+	if (elevatorEffect){
+		set<CHSRequest>::iterator it = cylinderRequestsSet.begin();
+		while(it!=cylinderRequestsSet.end()){
+			cout << it->cylinderNum << ", ";
+			it++;
+		}
+	}
+	else{
+		list <CHSRequest>::iterator it = withoutElevatorList.begin();
+		while(it!=withoutElevatorList.end()){
+			cout << it->cylinderNum << ", ";
+			it++;
+		}	
 	}
 	cout<<endl;
 }

@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <iostream>
 #include <set>
+#include <list>
 #include <cmath>
 #include "variables.h"
 
@@ -19,6 +20,7 @@ struct disk
 {
 	int diskTimer;
 	set<CHSRequest> cylinderRequestsSet;
+	list<CHSRequest> withoutElevatorList;
 	bool traversalDirection; 
 	set<CHSRequest>::iterator itr;
 
