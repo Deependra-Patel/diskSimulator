@@ -9,4 +9,5 @@ struct mainControllerStruct
 	cacheController cacheControllerStruct;
 	mainControllerStruct();
 	void diskRequest(int fileNum, int pagenum, int requestType);
+	void writeBackCache();
 };

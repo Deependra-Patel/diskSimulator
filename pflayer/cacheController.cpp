@@ -37,7 +37,10 @@ int cacheController::getFreePage(){
 	else return 0;
 }
 void cacheController::putPageInCache(int diskAddress, bool read){
+	cout<<"putPageInCache \n";
 	int freePage = getFreePage();
+	cout<<"Putting in "<<freePage<<endl;
+	free[freePage] = false;
 	diskAddressCacheMap[diskAddress] = freePage;//putting page in cache
 	accessOrder.push_back(freePage);
 	curSize ++;	
@@ -69,5 +72,17 @@ void cacheController::writePageToDisk(int diskAddress){
 	else { //found
 		cout<<"Page found in cache"<<endl;
 		dirty[got->second] = true;
+	}
+}
+void cacheController::writeBackAllDirty(){
+	cout<<"Writing cache:::"<<endl;
+	for(int i=0; i<cacheSize; i++){
+		if(dirty[i]){
+			int diskAddress = diskAddressOfPage[i];
+			char data[100];
+			strcpy(data, "data");
+			cout<<diskAddress<<endl;
+			//dC->requestHandler(diskAddress, false, data);
+		}
 	}
 }

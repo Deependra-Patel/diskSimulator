@@ -15,4 +15,5 @@ struct  cacheController{
 	void putPageInCache(int diskAddress, bool read);
 	void fetchPageFromDisk(int diskAddress);
 	void writePageToDisk(int diskAddress);
+	void writeBackAllDirty();
 };

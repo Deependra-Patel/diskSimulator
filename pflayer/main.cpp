@@ -15,8 +15,13 @@ int main(){
 	// }
 	srand(time(NULL));
 	mainControllerStruct obj = mainControllerStruct();
-	for (int i = 0; i < 10000; ++i)
-	{
-		obj.diskRequest(i, 1, 2); //write
+	for (int i = 0; i < 10000; ++i){
+		int pageNum = rand()%(D);
+
+		int ran = rand()%2;
+		if(ran)
+			obj.diskRequest(i, pageNum, 2); //write
+		else obj.diskRequest(i, pageNum, 1); //read
 	}
+	obj.writeBackCache();
 }

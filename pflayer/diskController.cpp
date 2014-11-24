@@ -4,7 +4,7 @@ struct dchs{
 	int d, c, h, s, parityDisk;
 	dchs(int address){
 		int blockNoInDisk = (address)/D;
-		int parityDisk = blockNoInDisk%(D+1);
+		parityDisk = blockNoInDisk%(D+1);
 		int temp = address%D;
 		if(parityDisk<=temp)
 			d = temp+1;
@@ -33,7 +33,7 @@ void diskController::readSector(int diskAddress, char* data){
 }
 void diskController::writeSector(int diskAddress, char* data){
 	dchs x = dchs(diskAddress);
-	cout<<"---------writeSector"<<diskAddress<<endl;
+	cout<<"---------writeSector "<<diskAddress<<endl;
 	cout<<"Reading From Disk: "<<x.parityDisk<<endl;
 	disks[x.parityDisk]->readRequest(x.c, x.h, x.s, timer, data);
 	timer++;

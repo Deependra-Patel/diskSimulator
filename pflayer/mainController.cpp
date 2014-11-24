@@ -52,5 +52,7 @@ void mainControllerStruct::diskRequest(int fileNum, int pagenum, int requestType
 			addressmap.erase(it);
 		}
 	}
-
+}
+void mainControllerStruct::writeBackCache(){
+	cacheControllerStruct.writeBackAllDirty();
 }
