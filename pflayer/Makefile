@@ -26,7 +26,7 @@ lint:
 install: pflayer.o 
 
 clean:	
-	rm -rf *.o *~ testhash testpf a.out file1 file2
+	rm -rf *.o *~ testhash testpf a.out file1 file2 report/finalreport.log report/finalreport.synctex.gz report/finalreport.aux
 
 compile:
 	g++ diskController.cpp diskRequestHandler.cpp main.cpp

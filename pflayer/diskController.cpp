@@ -62,4 +62,5 @@ void diskController::requestHandler(int diskAddress, bool requestType, char* dat
 	else{
 		writeSector(diskAddress, data);
 	}
+	updateAllDisks();
 }

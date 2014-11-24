@@ -45,13 +45,23 @@ There might be a case when the file is being deleted from the disk. In such a ca
 
 This main controller passes the requests to the cache controller for performing the operations.
 
-\subsection{Main Controller \\ (cacheController.cpp \& cacheController.h)}
+\subsection{Cache Controller \\ (cacheController.cpp \& cacheController.h)}
 \paragraph{}
+Cache for disks is implemented in this class. We have implemented fully associative cache as miss penalty is huge for reading and writing data to the disks. On receiving the diskAddress to read and write from mainController, it checks whether the page is already present in the cache. If already found in cache, Page data is returned from there. If requested page is not found in cache, then new page is allocated to it and that page is brought from disk using diskController.
 
+For page allocation, if any page is free that is allocated. If no free page found then page which is not dirty is allocated, if no such found then Least Recently Used(LRU) page is allocated after writing its contents to the disk.
 
 \subsection{Disk-System Controller \\ (diskController.cpp \& diskController.h)}
 \paragraph{}
+Disk Controller handles all the requests(read/write) made to the disk. The input disk address is first translated into corresponding disk and CHS(Cylinder Head Sector) format. As we are using RAID5, parity disk for that sector is also calculated. For numbering, we are using Right Asynchronous RAID5 type as given below:
+\begin{center}
+\includegraphics[scale=0.5]{raid5.png}
+\end{center}
 
+An array of all disk objects are created and read/write operations are done on them. \\
+Two types of operations: \\
+Read Sector -  Sector is read from the corresponding disk and returned back \\
+Write Sector - Both the requested and parity blocks are first read. XOR of bits of old data, the new data and the parity block is written back to parity block. New data is written to the corresponding sector.
 
 \subsection{Request Buffer and Elevator algorithm \\ (diskRequestHandler.cpp \& diskRequestHandler.h)}
 \paragraph{}
