@@ -80,6 +80,7 @@ void disk::implementRequest(){
 	previousTrack = currentRequest.headNum;
 	previousCylinder = currentRequest.cylinderNum;
 }
+
 void disk::printAll(){
 	set<CHSRequest>::iterator it = cylinderRequestsSet.begin();
 	while(it!=cylinderRequestsSet.end()){
