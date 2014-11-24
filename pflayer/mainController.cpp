@@ -25,7 +25,7 @@ void mainControllerStruct::diskRequest(int fileNum, int pagenum, int requestType
 	else if(requestType == 2){
 
 		/**
-			function to recover a obtain mapping from fillenumber, pagenumber 
+			function to recover a obtain mapping from filenumber, pagenumber 
 		*/
 
 		int answer;

@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage{graphicx}
-\usepackage[left=1.2in,top=1.0in,right=1.2in,bottom=0.75in]{geometry} % Document margins
+\usepackage[left=1.2in,top=1.0in,right=1.2in,bottom=1.0in]{geometry} % Document margins
 
 \title{\textbf{Toy DB Project Report \\ 
 	Disk Storage Simulator \\
@@ -35,8 +35,29 @@ The details of the various data structures and algorithms used in these classes 
 
 \section{Data Structures and Algorithm used for various classes}
 
-\subsection{Main Controller (mainController.cpp \& mainController.h)}
+\subsection{Main Controller \\ (mainController.cpp \& mainController.h)}
 \paragraph{}
+The main controller stores a mapping of page numbers of a particular file to the disk address. For implementing this functionality, the map data structure provided by the STL of c++ has been used. Whenever a read request for a particular page in particular file is made by the paged file module to this, it checks in the map if an address corresponding to this page is present in the map. If present, a read request is made to the cache controller, otherwise if there is no such mapping, it denotes that the page wasn't written in the disk earlier and it is an invalid request. In case of the request is invalid, it is dropped.
+
+Whenever a write request is made, it is checked that the mapping is already present in the map or not. In case it is present, it implies that the file is already present and is being overwritten. In case if it is not present (implying writing for the first time), a new mapping is assigned to the page randomly from the set of available free addresses in the disk and this mapping is put in the map.
+
+There might be a case when the file is being deleted from the disk. In such a case the mapping is no longer necessary and it is deleted from the map.
+
+This main controller passes the requests to the cache controller for performing the operations.
+
+\subsection{Main Controller \\ (cacheController.cpp \& cacheController.h)}
+\paragraph{}
+
+
+\subsection{Disk-System Controller \\ (diskController.cpp \& diskController.h)}
+\paragraph{}
+
+
+\subsection{Request Buffer and Elevator algorithm \\ (diskRequestHandler.cpp \& diskRequestHandler.h)}
+\paragraph{}
+This contains a class which places the requests into a request buffer and processes it using the elevator algorithm. The 
+
+Upon serving a particular request, the arm will now move to the next closest request in the direction of movement. This request will be obtained by iterating over the tree data structure. The first element of a tree is always the leftmost one. The next element after an element is the first element of its right subtree. If the element does not have a right child, the next element is the element's first right ancestor. If the element has neither a right child nor a right ancestor, it is the rightmost element and it's last in iteration. In this manner the requests will be served until the end/start of the tree has been reached (depending on the direction of the movement). At this movement the direction of iteration will be reversed. 
 
 \end{document}
 
