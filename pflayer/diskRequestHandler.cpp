@@ -101,7 +101,7 @@ void disk::implementRequest(){
 }
 
 void disk::printAll(){
-/*	if (elevatorEffect){
+	if (elevatorEffect){
 		set<CHSRequest>::iterator it = cylinderRequestsSet.begin();
 		while(it!=cylinderRequestsSet.end()){
 			cout << it->cylinderNum << ", ";
@@ -115,5 +115,5 @@ void disk::printAll(){
 			it++;
 		}	
 	}
-	cout<<endl;*/
+	cout<<endl;
 }

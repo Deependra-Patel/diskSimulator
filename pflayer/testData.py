@@ -4,8 +4,8 @@ from random import random
 
 file = open('input.txt', 'w')
 
-ilimit = 10000
-jlimit = 5
+ilimit = 1000
+jlimit = 11
 
 for i in range (0,ilimit):
 	x = random()

@@ -48,15 +48,16 @@ int main(){
 
 	srand(time(NULL));
 	mainControllerStruct obj = mainControllerStruct();
-	for(int i=0; i<10000; i++){
+	for(int i=0; i<tests; i++){
 		for(int j=0; j<D; j++){
 			obj.diskRequest(i, j, 2); //write
 		}
 	}
-	for(int z=0; z<10000; z++){
+	for(int z=0; z<tests; z++){
 		int i, j, k;
 		cin>>i>>j>>k;
 		obj.diskRequest(i, j, k+1); //write
 	}
 	obj.printAll();
+	
 }

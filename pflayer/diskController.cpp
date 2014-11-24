@@ -83,6 +83,7 @@ void diskController::requestHandler(int diskAddress, bool requestType, char* dat
 }
 void diskController::printAll(){
 	int totalSeeks = 0;
+	int maxTime = 0;
 	for(int i=0; i<D+1; i++){
 		cout<<"Data of disk "<<i<<endl;
 		cout<<"Timer: "<<disks[i]->diskTimer<<endl;
@@ -91,10 +92,12 @@ void diskController::printAll(){
 		cout<<"Total Block Transfers: "<<diskReads[i]+diskWrites[i]<<endl;
 		cout<<"Total seeks: "<<disks[i]->seeks<<endl<<endl;
 		totalSeeks+= disks[i]->seeks;
+		maxTime = max(maxTime, disks[i]->diskTimer);
 	}
 	cout<<"Priting DiskController Data-------------------\n";
 	cout<<"Total Reads: "<<totalReads<<endl;
 	cout<<"Total Writes: "<<totalWrites<<endl<<endl;
 	cout<<"Total Block Transfers: "<<totalWrites+totalReads<<endl;
-	cout<<"Total Seeks: "<<totalSeeks<<endl<<endl;
+	cout<<"Total Seeks: "<<totalSeeks<<endl;
+	cout<<"Max Time: "<<maxTime<<endl;
 }

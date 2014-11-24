@@ -12,7 +12,7 @@ int trackSwitch(int initial, int final){
 }
 
 int sectorSwitch(int initial, int final){
-	return 1;
+	return 0;
 	float oneRoundTime = (60*100)/rpm;
 	if(final>initial){
 		return (int)(final-initial)/(K*oneRoundTime);

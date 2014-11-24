@@ -19,4 +19,5 @@ struct  cacheController{
 	void writePageToDisk(int diskAddress);
 	void writeBackAllDirty();
 	void printAll();
+	void reset();
 };

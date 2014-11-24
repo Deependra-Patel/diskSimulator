@@ -31,5 +31,17 @@ clean:
 compile:
 	g++ diskController.cpp diskRequestHandler.cpp main.cpp
 
+data:
+	./testData.py >input.txt
+	make compile2
+	./disk.exe <input.txt >a.txt
+data2:
+	make compile2
+	./disk.exe <input.txt >a.txt
+
 compile2:
 	g++ -std=c++11 mainController.cpp cacheController.cpp diskController.cpp diskRequestHandler.cpp main.cpp -o disk.exe
+
+elevatorDemo:
+	g++ elevatorDemo.cpp diskRequestHandler.cpp
+	./a.out

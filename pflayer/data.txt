@@ -1,0 +1,434 @@
+//<on cache size 40 tests 10000
+Priting Cache Data-------------------
+Cache Hits: 10215
+Cache Miss: 49785
+Cache hit Ratio: 0.17025
+Data of disk 0
+Timer: 100111
+Total Reads: 16978
+Total Writes: 8604
+Total Block Transfers: 25582
+Total seeks: 16975
+
+Data of disk 1 
+Timer: 97576
+Total Reads: 16509
+Total Writes: 8263
+Total Block Transfers: 24772
+Total seeks: 16502
+
+Data of disk 2
+Timer: 97425
+Total Reads: 16554
+Total Writes: 8274
+Total Block Transfers: 24828
+Total seeks: 16552
+
+Data of disk 3
+Timer: 96341
+Total Reads: 16389
+Total Writes: 8101
+Total Block Transfers: 24490
+Total seeks: 16385
+
+Data of disk 4
+Timer: 95673
+Total Reads: 16230
+Total Writes: 7944
+Total Block Transfers: 24174
+Total seeks: 16227
+
+Data of disk 5
+Timer: 99234
+Total Reads: 16830
+Total Writes: 8559
+Total Block Transfers: 25389
+Total seeks: 16815
+
+Priting DiskController Data-------------------
+Total Reads: 99490
+Total Writes: 49745
+
+Total Block Transfers: 149235
+Total Seeks: 99456
+
+------
+Priting Cache Data-------------------
+Cache Hits: 10260
+Cache Miss: 49740
+Cache hit Ratio: 0.171
+Data of disk 0
+Timer: 96304
+Total Reads: 16542
+Total Writes: 8317
+Total Block Transfers: 24859
+Total seeks: 24849
+
+Data of disk 1
+Timer: 97056
+Total Reads: 16540
+Total Writes: 8135
+Total Block Transfers: 24675
+Total seeks: 24675
+
+Data of disk 2
+Timer: 96563
+Total Reads: 16420
+Total Writes: 8212
+Total Block Transfers: 24632
+Total seeks: 24632
+
+Data of disk 3
+Timer: 98134
+Total Reads: 16700
+Total Writes: 8321
+Total Block Transfers: 25021
+Total seeks: 25021
+
+Data of disk 4
+Timer: 97332
+Total Reads: 16558
+Total Writes: 8346
+Total Block Transfers: 24904
+Total seeks: 24904
+
+Data of disk 5
+Timer: 96986
+Total Reads: 16640
+Total Writes: 8369
+Total Block Transfers: 25009
+Total seeks: 25009
+
+Priting DiskController Data-------------------
+Total Reads: 99400
+Total Writes: 49700
+
+Total Block Transfers: 149100
+Total Seeks: 149090
+
+//<on cache size 40 tests 1000
+Priting Cache Data-------------------
+Cache Hits: 1000
+Cache Miss: 5000
+Cache hit Ratio: 0.166667
+Data of disk 0
+Timer: 9390
+Total Reads: 1596
+Total Writes: 805
+Total Block Transfers: 2401
+Total seeks: 1596
+
+Data of disk 1
+Timer: 9990
+Total Reads: 1693
+Total Writes: 831
+Total Block Transfers: 2524
+Total seeks: 1692
+
+Data of disk 2
+Timer: 9313
+Total Reads: 1579
+Total Writes: 797
+Total Block Transfers: 2376
+Total seeks: 1578
+
+Data of disk 3
+Timer: 9888
+Total Reads: 1679
+Total Writes: 840
+Total Block Transfers: 2519
+Total seeks: 1678
+
+Data of disk 4
+Timer: 10080
+Total Reads: 1697
+Total Writes: 885
+Total Block Transfers: 2582
+Total seeks: 1697
+
+Data of disk 5
+Timer: 9814
+Total Reads: 1676
+Total Writes: 802
+Total Block Transfers: 2478
+Total seeks: 1674
+
+Priting DiskController Data-------------------
+Total Reads: 9920
+Total Writes: 4960
+
+Total Block Transfers: 14880
+Total Seeks: 9915
+
+---------------------
+Priting Cache Data-------------------
+Cache Hits: 1000
+Cache Miss: 5000
+Cache hit Ratio: 0.166667
+Data of disk 0
+Timer: 9454
+Total Reads: 1625
+Total Writes: 798
+Total Block Transfers: 2423
+Total seeks: 2423
+
+Data of disk 1
+Timer: 9594
+Total Reads: 1640
+Total Writes: 794
+Total Block Transfers: 2434
+Total seeks: 2430
+
+Data of disk 2
+Timer: 9604
+Total Reads: 1634
+Total Writes: 818
+Total Block Transfers: 2452
+Total seeks: 2452
+
+Data of disk 3
+Timer: 9793
+Total Reads: 1666
+Total Writes: 839
+Total Block Transfers: 2505
+Total seeks: 2505
+
+Data of disk 4
+Timer: 9679
+Total Reads: 1642
+Total Writes: 840
+Total Block Transfers: 2482
+Total seeks: 2482
+
+Data of disk 5
+Timer: 9976
+Total Reads: 1713
+Total Writes: 871
+Total Block Transfers: 2584
+Total seeks: 2584
+
+Priting DiskController Data-------------------
+Total Reads: 9920
+Total Writes: 4960
+
+Total Block Transfers: 14880
+Total Seeks: 14876
+
+
+//<on cache size 40 tests 5000
+Priting Cache Data-------------------
+Cache Hits: 206
+Cache Miss: 5402
+Cache hit Ratio: 0.0367332
+Data of disk 0
+Timer: 10738
+Total Reads: 1805
+Total Writes: 939
+Total Block Transfers: 2744
+Total seeks: 1805
+
+Data of disk 1
+Timer: 10578
+Total Reads: 1786
+Total Writes: 879
+Total Block Transfers: 2665
+Total seeks: 1786
+
+Data of disk 2
+Timer: 10595
+Total Reads: 1793
+Total Writes: 900
+Total Block Transfers: 2693
+Total seeks: 1793
+
+Data of disk 3
+Timer: 10457
+Total Reads: 1769
+Total Writes: 869
+Total Block Transfers: 2638
+Total seeks: 1769
+
+Data of disk 4
+Timer: 10602
+Total Reads: 1787
+Total Writes: 889
+Total Block Transfers: 2676
+Total seeks: 1787
+
+Data of disk 5
+Timer: 10409
+Total Reads: 1767
+Total Writes: 869
+Total Block Transfers: 2636
+Total seeks: 1765
+
+Priting DiskController Data-------------------
+Total Reads: 10707
+Total Writes: 5345
+
+Total Block Transfers: 16052
+Total Seeks: 10705
+
+-------------
+Priting Cache Data-------------------
+Cache Hits: 5085
+Cache Miss: 24915
+Cache hit Ratio: 0.1695
+Data of disk 0
+Timer: 48078
+Total Reads: 8265
+Total Writes: 4041
+Total Block Transfers: 12306
+Total seeks: 12298
+
+Data of disk 1
+Timer: 48329
+Total Reads: 8224
+Total Writes: 4153
+Total Block Transfers: 12377
+Total seeks: 12377
+
+Data of disk 2
+Timer: 48524
+Total Reads: 8273
+Total Writes: 4033
+Total Block Transfers: 12306
+Total seeks: 12305
+
+Data of disk 3
+Timer: 48022
+Total Reads: 8164
+Total Writes: 4100
+Total Block Transfers: 12264
+Total seeks: 12263
+
+Data of disk 4
+Timer: 49706
+Total Reads: 8457
+Total Writes: 4221
+Total Block Transfers: 12678
+Total seeks: 12678
+
+Data of disk 5
+Timer: 48809
+Total Reads: 8367
+Total Writes: 4327
+Total Block Transfers: 12694
+Total seeks: 12694
+
+Priting DiskController Data-------------------
+Total Reads: 49750
+Total Writes: 24875
+
+Total Block Transfers: 74625
+Total Seeks: 74615
+
+
+//<on cache size 40 tests 100
+Priting Cache Data-------------------
+Cache Hits: 100
+Cache Miss: 500
+Cache hit Ratio: 0.166667
+Data of disk 0
+Timer: 959
+Total Reads: 173
+Total Writes: 94
+Total Block Transfers: 267
+Total seeks: 173
+
+Data of disk 1
+Timer: 837
+Total Reads: 154
+Total Writes: 85
+Total Block Transfers: 239
+Total seeks: 151
+
+Data of disk 2
+Timer: 902
+Total Reads: 164
+Total Writes: 82
+Total Block Transfers: 246
+Total seeks: 164
+
+Data of disk 3
+Timer: 846
+Total Reads: 153
+Total Writes: 81
+Total Block Transfers: 234
+Total seeks: 153
+
+Data of disk 4
+Timer: 840
+Total Reads: 154
+Total Writes: 70
+Total Block Transfers: 224
+Total seeks: 154
+
+Data of disk 5
+Timer: 658
+Total Reads: 122
+Total Writes: 48
+Total Block Transfers: 170
+Total seeks: 122
+
+Priting DiskController Data-------------------
+Total Reads: 920
+Total Writes: 460
+
+Total Block Transfers: 1380
+Total Seeks: 917
+
+
+------------
+Priting Cache Data-------------------
+Cache Hits: 100
+Cache Miss: 500
+Cache hit Ratio: 0.166667
+Data of disk 0
+Timer: 996
+Total Reads: 170
+Total Writes: 94
+Total Block Transfers: 264
+Total seeks: 264
+
+Data of disk 1
+Timer: 1029
+Total Reads: 174
+Total Writes: 94
+Total Block Transfers: 268
+Total seeks: 268
+
+Data of disk 2
+Timer: 984
+Total Reads: 166
+Total Writes: 93
+Total Block Transfers: 259
+Total seeks: 259
+
+Data of disk 3
+Timer: 834
+Total Reads: 144
+Total Writes: 66
+Total Block Transfers: 210
+Total seeks: 210
+
+Data of disk 4
+Timer: 696
+Total Reads: 118
+Total Writes: 47
+Total Block Transfers: 165
+Total seeks: 165
+
+Data of disk 5
+Timer: 838
+Total Reads: 148
+Total Writes: 66
+Total Block Transfers: 214
+Total seeks: 209
+
+Priting DiskController Data-------------------
+Total Reads: 920
+Total Writes: 460
+
+Total Block Transfers: 1380
+Total Seeks: 1375

@@ -108,6 +108,10 @@ void cacheController::writeBackAllDirty(){
 		}
 	}
 }
+void cacheController::reset(){
+	cacheHit =0;
+	cacheMiss =0;
+}
 void cacheController::printAll(){
 	cout<<"Priting Cache Data-------------------\n";
 	cout<<"Cache Hits: "<<cacheHit<<endl;
