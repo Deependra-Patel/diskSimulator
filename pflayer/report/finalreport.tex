@@ -1,7 +1,7 @@
 \documentclass[11pt]{article}
 
 \usepackage{graphicx}
-\usepackage[left=1.2in,top=1.0in,right=1.2in,bottom=1.0in]{geometry} % Document margins
+\usepackage[left=1.2in,top=1.2in,right=1.2in,bottom=1.0in]{geometry} % Document margins
 
 \title{\textbf{Toy DB Project Report \\ 
 	Disk Storage Simulator \\
@@ -22,12 +22,12 @@
 
 This report talks about a strategic simulation of a disk system. The simulation includes an efficient arm movement strategy for processing the requests on a disk system, providing reliability, high performance through implementation of the \textbf{RAID-5} technology and caching unit for faster access. 
 
-This disk-system is accessed by the paged file module provided at the starting of the project. The statistics related to various performance parameters are gathered and various conclusions and effect of the technologies used are displayed through graphs etc.
+This disk-system is accessed during read and write requests randomly. The statistics related to various performance parameters are gathered and various conclusions and effect of the technologies used are displayed through graphs etc.
 	
 \section{Structure of the disk-system}
 \paragraph{}
 
-A main controller controls and executes all the functionalities provided. This is the structure that is accessed by the paged file module and acts as an interface between the PF layer and the disk.
+A main controller controls and executes all the functionalities provided. 
 
 The main controller provides a mapping of page number to disk addresses. It has an access to a cache controller which manages the disk cache and interfaces between the disk-system and the main controller. The cache controller checks if the data is present in the cache and returns it. If not present, it passes the request to a disk controller which simulates the disk-system. The disk controller passes this request to a request buffer which in turn processes these requests using the elevator algorithm.
 
@@ -53,11 +53,36 @@ Cache for disks is implemented in this class. We have implemented fully associat
 
 For page allocation, if any page is free that is allocated. If no free page found then page which is not dirty is allocated, if no such found then Least Recently Used(LRU) page is allocated after writing its contents to the disk.
 
+
 An unordered map is used to keep mapping of disk address to corresponding page number in cache. Two boolean arrays of free pages and dirty pages is also kept. Whenever a page is written in cache, dirty flag is marked true. If any page marked dirty is to be removed from cache then its data has to be written back to disk. A linked list of pages is kept to store the allocated pages ordered by time. LRU is implemented on these pages by popping out first element on page allocation and pushing back the newly allocated page.
+
 
 \subsection{Disk-System Controller \\ (diskController.cpp \& diskController.h)}
 \paragraph{}
 Disk Controller handles all the requests(read/write) made to the disk. The input disk address is first translated into corresponding disk and CHS(Cylinder Head Sector) format. As we are using RAID5, parity disk for that sector is also calculated. For calculating disk number, we are using Right Asynchronous RAID5 type as given below:
+
+
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.70]{images/disk.png}
+\caption{Design of the RAID-5 system and distribution of parity blocks}
+\label{overflow}
+\end{figure}
+
+\subsubsection{Disk Number and CHS conversion}
+In case of a RAID-5 system, the CHS conversion is complicated to normal conversion. In this scenario we have to take care of the parity block. The data block may need to be shifted in the next block to accommodate the parity block.
+
+
+Let there be D disks are used in RAID5 (D+1 in total), each with each with N cylinders, M tracks/cylinder, and K sectors per track. Then the disk address of this sector can be calculated as :
+\\
+\begin{itemize}
+\item d is the disk number. d  belongs to [ 0, 1, 2, …  D] 
+\item c is the cylinder number. c belongs to [0, 1, 2, … N - 1] 
+\item t is the head/track number. h belongs to [0, 1, 2, … M - 1] 
+\item s is the sector number. s belongs to  [0, 1, 2, … K - 1] 
+\item p is parity disk corresponding to a CHS 
+\item a is address in that disk \\
+\end{itemize}
 
 \begin{figure}[ht!]
 \center
@@ -66,37 +91,24 @@ Disk Controller handles all the requests(read/write) made to the disk. The input
 \label{overflow}
 \end{figure}
 
-\begin{figure}[ht!]
-\center
-\includegraphics[scale = 0.80]{images/disk.png}
-\caption{Design of the RAID-5 system and distribution of parity blocks}
-\label{overflow}
-\end{figure}
-
-
-Disk Number and CHS conversion \\
-Let there be D disks are used in RAID5 (D+1 in total), each with each with N cylinders, M tracks/cylinder, and K sectors per track. Then the disk address of this sector can be calculated as :
-\\
-d is the disk number. d  ∈ {0, 1, 2, …  D} \\
-c is the cylinder number. c  ∈ {0, 1, 2, … N - 1} \\
-t is the head/track number. h ∈ {0, 1, 2, … M - 1} \\
-s is the sector number. s ∈ {0, 1, 2, … K - 1} \\
-p is parity disk corresponding to a chs \\
-a is address in that disk \\
 So, given the disk address, c,h and s can be calculated  as:
-a = DiskAddress/D;
-p = a%(D+1)
-if p<=DiskAddress%D
-then d = DiskAddress%D
-else d = DiskAddress%D + 1
-c = a/(M*K) \\
-t = [ a/K ] modulo M \\
-s = a modulo K \\
+\begin{itemize}
+\item a = DiskAddress/D;
 
-An array of all disk objects are created and read/write operations are done on them. \\
-Two types of operations: \\
-Read Sector -  Sector is read from the corresponding disk and returned back \\
-Write Sector - Both the requested and parity blocks are first read. XOR of bits of old data, the new data and the parity block is written back to parity block. New data is written to the corresponding sector.
+\item p = a\%(D+1) 
+
+\item {If p is less than or equal to DiskAddress\%D then d = DiskAddress\%D  \\
+	else, d = DiskAddress\%D + 1}
+\item c = a/(M*K)
+\item t = [ a/K ] modulo M
+\item s = a modulo K
+\end{itemize}
+
+An array of all disk objects are created and read/write operations are done on them.
+\begin{enumerate}
+\item \textbf{Read Sector} -  Sector is read from the corresponding disk and returned back.
+\item \textbf{Write Sector} - Both the requested and parity blocks are first read. XOR of bits of old data, the new data and the parity block is written back to parity block. New data is written to the corresponding sector. Total 2 reads and 2 writes are performed.
+\end{enumerate}
 
 After any operation, one pending request from buffer of each disk is executed.
 
@@ -111,38 +123,120 @@ Upon serving the requests for a particular cylinder, the request structure is de
 
 In this manner the requests will be served until the start/end of the tree has been reached (depending on the direction of the movement). When the start/end has been reached, the direction of iteration will be reversed.
 
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.7]{images/elevatorDemo.png}
+\caption{Elevator Algorithm in action}
+\label{overflow}
+\end{figure}
+
 While the traversal is being done, various statistics are being gathered like the number of times the cylinder switch is happening (i.e. the arm movement), the rotational latency incurred and the track switch. Printing the requests in the buffer is also supported which shows how the requests are being processed and queued up.
 
-\subsection{Statistics \\ (main.cpp \& testData.py)}
+\section{Analysis of data and statistics \\ (main.cpp \& testData.py)}
 \paragraph{}
-For computing the statistics data, first we wrote all the file pages. Then some number of requests are randomly generated which accesses disks to read or write data. Global flags cacheEffect and elevatorEffect are kept which can be changed true/false and all classes works correspondingly.
+For computing the statistics data, first all the file pages are written. Then requests are randomly generated which access disks to read or write data. Global flags cacheEffect and elevatorEffect are kept which can be changed true/false and all classes works correspondingly.
 
-\includegraphics[scale = 0.60]{images/table1.png}\\
-We plot the graphs of given table.
+\subsection{Effect of elevator algorithm}
+\paragraph{}
 
-\includegraphics[scale = 0.60]{images/img0.png}\\
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.70]{images/table1.png}
+\caption{Statistics of time taken, seeks and block transfers by varying no. request}
+\label{overflow}
+\end{figure}
+
+
+
+The plot of number of seeks required vs no. of requests are plotted in the below graph. The blue plot describes seeks with the elevator algorithm and the red one without elevator.
+
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.65]{images/img0.png}
+\caption{Seeks vs no. of requests}
+\label{overflow}
+\end{figure}
+
+
 From the above graph, we can see that for a given number of requests, Number of seeks without elevator algorithm is greater than that without it. In elevator algorithm, requests are sorted in order of cylinder number.Therefore requests on same cylinder can be completed without making any seek. Thus extra seek time is avoided using elevator algorithm.
-\includegraphics[scale = 0.60]{images/img1.png} \\
-From the above graph, we can see for a given number of requests total time taken with elevator algorithm is always less than that without it. 
 
-\includegraphics[scale = 0.60]{images/table2.png}\\
+
+
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.63]{images/img1.png} 
+\caption{Time taken vs. no. of requests}
+\label{overflow}
+\end{figure}
+
+From the graph given below, we can see for a given number of requests total time taken with elevator algorithm is always less than that without it. 
+
+\subsection{Effect of caching on the disk}
+\paragraph{}
+
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.70]{images/table2.png}
+\caption{Effect of cache on no. of seeks, block transfers, total time and cache hit ratio}
+\label{overflow}
+\end{figure}
+
+
 
 On switching on the cache, seeks and block transfers decreases eventually decreasing the total time. Disk addresses are accessed randomly therefore cache hit ratio is not much higher. 
-\includegraphics[scale = 0.60]{images/table3.png}\\
 
-For same number of total disk size, we increased the RAID level and found that as we increase raid level total time taken for same requests is decreased. This is due to dispersion of requests among many disks.
 
-\includegraphics[scale = 0.60]{images/table4.png}\\
+\subsection{Effect of increasing the no. of disks, while keeping the total space constant}
+\paragraph{}
+
+
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.60]{images/table3.png}
+\caption{Effect of increasing the no. of disks while keeping the total }
+\label{overflow}
+\end{figure}
+
+
+For same number of total disk size, we increased the no. of disks and found that as we increase raid level total time taken for same requests is decreased. This is due to dispersion of requests among many disks.
+
+\subsection{Effect of increasing the cache size on no. of seeks and time taken}
+\paragraph{}
+
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.60]{images/table4.png}
+\caption{Effect of increasing the no. of disks while keeping the total }
+\label{overflow}
+\end{figure}
+
+
 Graphs for the above table are
 
-\includegraphics[scale = 0.60]{images/cache.png}\\
+
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.70]{images/cache.png}
+\caption{Effect on cache hit rate by increasing the cache size }
+\label{overflow}
+\end{figure}
+
 
 We can see that the cache hit ratio(\#cache-hits/\#total-accesses) decreases as cache size increases. More pages can be stored increasing number of cache hits.
 
 
-\includegraphics[scale = 0.50]{images/cache2.png}\\
+\begin{figure}[ht!]
+\center
+\includegraphics[scale = 0.60]{images/cache2.png}
+\caption{Effect on total time by increasing the cache size}
+\label{overflow}
+\end{figure}
 
 As the cache size increases, the time taken to execute reduces drastically after some time. This is because some pages are already cached which need not be written back or read from the disk. As size of cache increases more such pages can be cached.
+
+\section{Conclusions}
+\paragraph{}
+In this report we talked about 
 
 \end{document}
 
