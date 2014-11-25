@@ -1,6 +1,8 @@
 \documentclass[11pt]{article}
 
 \usepackage{graphicx}
+\usepackage[utf8]{inputenc}
+
 \usepackage[left=1.2in,top=1.2in,right=1.2in,bottom=1.0in]{geometry} % Document margins
 
 \title{\textbf{Toy DB Project Report \\ 
@@ -236,7 +238,9 @@ As the cache size increases, the time taken to execute reduces drastically after
 
 \section{Conclusions}
 \paragraph{}
-In this report we talked about 
+In this report we talked about simulating a disk system and various aspects associated with it. It was seen that implementing RAID-5 technology demands more resources but in turn uses lesser no. of disks.
+ 
+We learned how paging is implemented in hard disks and how pages of a file is distributed in various disks to provide an interleaved-parity RAID system. We saw and discovered the effect and importance of efficient data structures \& algorithms and caching in the implementation by various statistics.
 
 \end{document}
 
