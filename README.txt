@@ -7,7 +7,7 @@ Deependra Patel
 Rohit Kumar
 
 HOW TO USE ::
-Only Simulation folder is useful. Extra is for adding pf layer or amlayer simulation.
+Only "Simulator" folder is useful. Extra is for adding pf layer or amlayer simulation.
 Please read report for more information to first get an overview.
 
 1. Run "make data" in terminal and see the output in a.txt file.
